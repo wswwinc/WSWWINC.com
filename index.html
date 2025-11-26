@@ -2,9 +2,12 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>WhiteScience – Professional Teeth Whitening Systems</title>
+  <title>WhiteScience – Professional Teeth Whitening | WSWWINC</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="WhiteScience delivers professional-grade teeth whitening systems for modern dental and aesthetic practices." />
+  <meta
+    name="description"
+    content="WhiteScience and Artiste Dental – professional teeth whitening systems, marketing support, and WhiteICE carnauba wax toothpaste for dental practices."
+  />
 
   <style>
     * {
@@ -14,352 +17,318 @@
     }
 
     body {
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text",
-        "Helvetica Neue", Arial, sans-serif;
-      background: radial-gradient(circle at top, #101520 0%, #06080c 55%, #020308 100%);
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Helvetica Neue",
+        Arial, sans-serif;
+      background: #0b1020;
       color: #f5f5f5;
       line-height: 1.6;
       -webkit-font-smoothing: antialiased;
     }
 
     .wrap {
-      max-width: 880px;
+      max-width: 960px;
       margin: 0 auto;
-      padding: 32px 20px 40px;
+      padding: 24px 16px 60px;
     }
 
     header {
-      display: flex;
-      align-items: center;
-      gap: 18px;
-      margin-bottom: 40px;
+      text-align: center;
+      padding: 32px 16px 24px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
     }
 
-    .logo-circle {
-      width: 80px;
-      height: 80px;
-      border-radius: 50%;
-      background: radial-gradient(circle at 30% 20%, #dfe6ff 0%, #b7c4ff 25%, #4f5f7a 60%, #2a3342 100%);
-      position: relative;
-      box-shadow:
-        0 0 25px rgba(123, 200, 255, 0.45),
-        0 15px 35px rgba(0, 0, 0, 0.65);
-      overflow: hidden;
-    }
-
-    .logo-circle::before,
-    .logo-circle::after {
-      content: "";
-      position: absolute;
-      border-radius: 999px;
-      border: 2px solid rgba(255, 255, 255, 0.9);
-    }
-
-    /* stylised S */
-    .logo-circle::before {
-      inset: 18px 26px;
-      border-color: transparent;
-      border-left-color: rgba(255, 255, 255, 0.95);
-      transform: skewX(-12deg);
-    }
-
-    .logo-circle::after {
-      inset: 15px;
-      border-color: rgba(255, 255, 255, 0.16);
-    }
-
-    .wordmark {
-      letter-spacing: 0.12em;
-      font-size: 13px;
+    header h1 {
+      font-size: 1.9rem;
+      letter-spacing: 0.05em;
       text-transform: uppercase;
-      color: #9fb3d9;
+      margin-bottom: 6px;
     }
 
-    .wordmark-main {
-      font-size: 26px;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
+    header h1 span {
+      color: #4ee1ff;
+    }
+
+    header p {
+      color: #c1c5d6;
+      font-size: 0.95rem;
+      max-width: 540px;
+      margin: 0 auto;
+    }
+
+    .hero-callout {
+      margin-top: 18px;
+      padding: 12px 16px;
+      border-radius: 10px;
+      background: linear-gradient(135deg, #1a2440, #101528);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      font-size: 0.9rem;
+      color: #e7ebff;
+    }
+
+    main {
+      padding-top: 24px;
+    }
+
+    section.content-section {
+      margin-bottom: 32px;
+      padding: 20px 18px;
+      border-radius: 14px;
+      background: radial-gradient(circle at top left, #1b2645 0, #070a13 55%);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      box-shadow: 0 14px 40px rgba(0, 0, 0, 0.6);
+    }
+
+    section.content-section h2 {
+      font-size: 1.3rem;
+      margin-bottom: 10px;
+      color: #ffffff;
+    }
+
+    section.content-section h3 {
+      font-size: 1.05rem;
+      margin: 12px 0 6px;
+      color: #cbe8ff;
+    }
+
+    section.content-section p {
+      margin-bottom: 8px;
+      font-size: 0.95rem;
+      color: #dde2f3;
+    }
+
+    section.content-section ul {
+      margin-left: 18px;
       margin-top: 4px;
-      font-weight: 300;
-    }
-
-    .wordmark-main span.white {
-      color: #f5f7ff;
-      font-weight: 200;
-      opacity: 0.9;
-    }
-
-    .wordmark-main span.science {
-      color: #d1e4ff;
-      font-weight: 400;
-    }
-
-    .wordmark-sub {
-      font-size: 11px;
-      letter-spacing: 0.45em;
-      text-transform: uppercase;
-      margin-top: 6px;
-      color: #8897b8;
-    }
-
-    .hero {
-      margin-top: 10px;
-      padding: 26px 22px 24px;
-      border-radius: 22px;
-      background: radial-gradient(circle at top left, #273755 0%, #131a28 40%, #0a0f18 100%);
-      box-shadow:
-        0 30px 60px rgba(0, 0, 0, 0.85),
-        0 0 80px rgba(90, 190, 255, 0.25);
-    }
-
-    .hero-kicker {
-      font-size: 12px;
-      letter-spacing: 0.35em;
-      text-transform: uppercase;
-      color: #9fb3d9;
       margin-bottom: 10px;
+      font-size: 0.92rem;
+      color: #dde2f3;
     }
 
-    .hero h1 {
-      font-size: 24px;
-      margin-bottom: 10px;
-      font-weight: 400;
+    section.content-section li {
+      margin-bottom: 4px;
     }
 
-    .hero h1 strong {
-      font-weight: 500;
-      color: #e5f0ff;
+    .tag {
+      display: inline-block;
+      padding: 2px 8px;
+      font-size: 0.75rem;
+      border-radius: 999px;
+      background: rgba(78, 225, 255, 0.1);
+      color: #4ee1ff;
+      border: 1px solid rgba(78, 225, 255, 0.5);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 8px;
     }
 
-    .hero p {
-      font-size: 15px;
-      color: #d5deef;
-      margin-bottom: 20px;
+    .highlight {
+      color: #4ee1ff;
+      font-weight: 600;
     }
 
-    .hero-contact {
-      font-size: 13px;
-      margin-bottom: 18px;
-      color: #aebedd;
-    }
-
-    .hero-contact a {
-      color: #51c3ff;
+    a {
+      color: #4ee1ff;
       text-decoration: none;
     }
 
-    .hero-contact a:hover {
+    a:hover {
       text-decoration: underline;
     }
 
-    .hero-actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      align-items: center;
-    }
-
-    .btn-primary {
-      border: none;
+    .cta-button {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 9px 16px;
       border-radius: 999px;
-      padding: 11px 26px;
-      font-size: 13px;
-      letter-spacing: 0.16em;
-      text-transform: uppercase;
-      cursor: pointer;
-      background: linear-gradient(135deg, #47b5ff, #00e0ff);
-      color: #020308;
+      background: linear-gradient(135deg, #4ee1ff, #18b6ff);
+      color: #02040a;
       font-weight: 600;
-      box-shadow:
-        0 12px 30px rgba(0, 208, 255, 0.55),
-        0 0 35px rgba(94, 205, 255, 0.55);
+      font-size: 0.9rem;
+      text-decoration: none;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
     }
 
-    .btn-primary:hover {
-      filter: brightness(1.06);
-    }
-
-    .hero-note {
-      font-size: 11px;
-      color: #8fa0c4;
-    }
-
-    .grid {
-      display: grid;
-      grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
-      gap: 22px;
-      margin-top: 30px;
-    }
-
-    .card {
-      padding: 20px 18px 18px;
-      border-radius: 18px;
-      background: radial-gradient(circle at top, #1c2333 0%, #090d14 100%);
-      border: 1px solid rgba(138, 162, 210, 0.2);
-      box-shadow: 0 18px 45px rgba(0, 0, 0, 0.75);
-    }
-
-    .card h2 {
-      font-size: 15px;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      color: #9fb3d9;
-      margin-bottom: 10px;
-    }
-
-    .card h3 {
-      font-size: 18px;
-      margin-bottom: 10px;
-      color: #e2ecff;
-      font-weight: 500;
-    }
-
-    .card p {
-      font-size: 13px;
-      color: #c0cee9;
-      margin-bottom: 12px;
-    }
-
-    .card ul {
-      list-style: none;
-      font-size: 13px;
-      color: #c0cee9;
-    }
-
-    .card ul li {
-      margin-bottom: 6px;
-      padding-left: 16px;
-      position: relative;
-    }
-
-    .card ul li::before {
-      content: "•";
-      position: absolute;
-      left: 4px;
-      color: #59c8ff;
+    .cta-button:hover {
+      filter: brightness(1.05);
+      text-decoration: none;
     }
 
     footer {
       margin-top: 32px;
       padding-top: 18px;
-      border-top: 1px solid rgba(124, 144, 190, 0.35);
-      font-size: 11px;
-      color: #8a9abc;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      font-size: 0.82rem;
+      color: #9ba0b5;
+      text-align: center;
     }
 
-    footer a {
-      color: #9fc9ff;
-      text-decoration: none;
+    footer p {
+      margin-bottom: 6px;
     }
 
-    footer a:hover {
-      text-decoration: underline;
-    }
+    @media (min-width: 768px) {
+      header h1 {
+        font-size: 2.1rem;
+      }
 
-    @media (max-width: 720px) {
-      .wrap {
-        padding: 24px 18px 36px;
-      }
-      header {
-        flex-direction: row;
-        align-items: center;
-      }
-      .logo-circle {
-        width: 70px;
-        height: 70px;
-      }
-      .wordmark-main {
-        font-size: 22px;
-      }
-      .hero {
-        padding: 20px 18px 18px;
-      }
-      .hero h1 {
-        font-size: 21px;
-      }
-      .grid {
-        grid-template-columns: minmax(0, 1fr);
+      section.content-section {
+        padding: 22px 22px;
       }
     }
   </style>
 </head>
-
 <body>
   <div class="wrap">
     <header>
-      <div class="logo-circle"></div>
-      <div>
-        <div class="wordmark">WHITESCINCE</div>
-        <div class="wordmark-main">
-          <span class="white">WHITE</span><span class="science">science</span>
-        </div>
-        <div class="wordmark-sub">DENTAL</div>
+      <h1><span>WhiteScience</span> Professional Teeth Whitening</h1>
+      <p>
+        In-office and take-home whitening systems, turnkey marketing, and
+        maintenance products designed to help dental professionals deliver
+        stunning shade changes with confidence.
+      </p>
+
+      <div class="hero-callout">
+        *Shade change based on typical patient results using WhiteScience
+        systems and protocols. For professional use only.
       </div>
     </header>
 
-    <section class="hero">
-      <div class="hero-kicker">Professional Teeth Whitening Systems</div>
-      <h1><strong>Advanced whitening technology</strong> built for modern practices.</h1>
-      <p>
-        WhiteScience delivers professional-grade teeth whitening systems designed
-        to integrate seamlessly into dental and aesthetic clinics that expect
-        clean design, reliable performance, and visible results.
-      </p>
-
-      <div class="hero-contact">
-        For orders, distribution, or product information, contact:
-        <a href="mailto:Thebusiness101@aol.com">Thebusiness101@aol.com</a>
-      </div>
-
-      <div class="hero-actions">
-        <button class="btn-primary" onclick="window.location.href='mailto:Thebusiness101@aol.com?subject=WhiteScience%20Product%20Inquiry';">
-          BUY WHITESCIENCE PRODUCTS
-        </button>
-        <div class="hero-note">
-          8–12 shades in a single 30 minute session with a clean, minimal patient experience.
-        </div>
-      </div>
-    </section>
-
-    <section class="grid">
-      <article class="card">
-        <h2>For Clinics</h2>
-        <h3>Chairside whitening that feels premium</h3>
+    <main>
+      <!-- Core Intro Section -->
+      <section class="content-section">
+        <span class="tag">Systems &amp; Support</span>
+        <h2>Complete Whitening Solutions for Your Practice</h2>
         <p>
-          A streamlined, light-based whitening system designed for practices that want
-          high-end results without a high-maintenance setup.
+          WhiteScience systems are supported with clear protocols, staff
+          training, and marketing tools that make whitening simple to offer and
+          easy to present in any office.
         </p>
-        <ul>
-          <li>8–12 shade improvement in one 30 minute session*</li>
-          <li>Clean, minimal equipment footprint for modern operatories</li>
-          <li>Comfort-focused formulas crafted for patient experience</li>
-          <li>Consistent, repeatable outcomes your team can trust</li>
-        </ul>
-      </article>
 
-      <article class="card">
-        <h2>Partnership</h2>
-        <h3>Distribution & branding options</h3>
-        <p>
-          WhiteScience systems are supported with premium visual assets and
-          marketing support designed to keep your whitening offer simple, beautiful,
-          and easy to present.
-        </p>
+        <h3>What you get:</h3>
         <ul>
-          <li>Professional photography and display-ready artwork</li>
-          <li>Training and positioning support for your team</li>
-          <li>Options for bundled kits and merchandising</li>
-          <li>Direct contact for bulk orders and collaborations</li>
+          <li>Professional-grade whitening systems and formulas</li>
+          <li>Clear, step-by-step treatment protocols</li>
+          <li>Marketing support to help promote whitening services</li>
+          <li>Options for bundled kits and retail products</li>
+          <li>Direct contact for business and clinical questions</li>
         </ul>
-      </article>
-    </section>
+      </section>
+
+      <!-- For Dentists Section -->
+      <section id="for-dentists" class="content-section">
+        <span class="tag">For Dentists</span>
+        <h2>Artiste Dental – WSWWINC Is the Dentist’s Best Friend</h2>
+
+        <p>
+          <strong>Artiste Dental / WSWWINC</strong> focuses on the retail and
+          consumer teeth whitening market. We understand the challenges dentists
+          face in building and satisfying a growing patient base while keeping
+          treatments affordable, convenient, and time-efficient.
+        </p>
+
+        <p>
+          Our programs are designed so whitening fits naturally into your
+          existing workflow — not the other way around. From in-office
+          treatments to take-home maintenance, we help you offer whitening with
+          confidence.
+        </p>
+
+        <h3>Why partner with WSWWINC?</h3>
+        <ul>
+          <li>Professional systems designed for real-world dental practices</li>
+          <li>Easy-to-present options your patients understand quickly</li>
+          <li>Retail and chairside products that work together as a system</li>
+          <li>Support to help your team talk about whitening comfortably</li>
+        </ul>
+
+        <p>
+          <strong
+            >Email us at
+            <a href="mailto:WSWWINC@yahoo.com">WSWWINC@yahoo.com</a></strong
+          >
+          to learn how to bring WhiteScience and WhiteICE into your office.
+        </p>
+      </section>
+
+      <!-- WhiteICE Toothpaste Section -->
+      <section id="whiteice-toothpaste" class="content-section">
+        <span class="tag">WhiteICE</span>
+        <h2>The World’s First Carnauba Wax Toothpaste</h2>
+
+        <p>
+          WhiteScience brings you <strong>WhiteICE</strong> – the world’s first
+          <span class="highlight">carnauba-based wax toothpaste</span>. It is
+          designed to help protect the pores of the teeth from coffee, tea, and
+          wine for hours after brushing.
+        </p>
+
+        <h3>Key benefits:</h3>
+        <ul>
+          <li>
+            Helps shield the enamel surface from everyday stain-makers like
+            coffee, tea, and red wine
+          </li>
+          <li>
+            Up to <strong>22× the strength</strong> of typical over-the-counter
+            toothpaste when used as directed
+          </li>
+          <li>
+            Ideal as a maintenance product after in-office or take-home
+            whitening
+          </li>
+          <li>
+            Easy for patients to use daily as part of their normal routine
+          </li>
+        </ul>
+
+        <p>
+          Give your patients a premium maintenance product they can actually
+          feel working and that supports the shade change you’ve created in the
+          chair.
+        </p>
+
+        <p>
+          <a class="cta-button" href="mailto:WSWWINC@yahoo.com?subject=WhiteICE Wholesale">
+            Contact us about WhiteICE wholesale &amp; in-office pricing
+          </a>
+        </p>
+      </section>
+
+      <!-- Contact Section -->
+      <section id="contact" class="content-section">
+        <span class="tag">Contact</span>
+        <h2>Get in Touch</h2>
+        <p>
+          For product information, distribution opportunities, or marketing
+          support, reach out directly:
+        </p>
+
+        <p>
+          <strong>Email:</strong>
+          <a href="mailto:WSWWINC@yahoo.com">WSWWINC@yahoo.com</a>
+        </p>
+
+        <p>
+          Whether you are an established practice or just beginning to build out
+          your whitening services, WSWWINC is here to help you deliver brighter
+          smiles with confidence.
+        </p>
+      </section>
+    </main>
 
     <footer>
-      *Shade change based on typical in-practice protocols. Individual results may vary.
-      <br />
-      For professional use only. For enquiries, email
-      <a href="mailto:Thebusiness101@aol.com">Thebusiness101@aol.com</a>.
+      <p>
+        *Results will vary from patient to patient. Whitening products are
+        intended for professional use and for patients under the care and
+        supervision of a licensed dental professional.
+      </p>
+      <p>&copy; <span id="year"></span> WhiteScience / WSWWINC. All rights reserved.</p>
     </footer>
   </div>
+
+  <script>
+    // Set current year in footer
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
