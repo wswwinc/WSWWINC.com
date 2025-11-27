@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>WhiteScience | WhiteICE Carnauba Wax Toothpaste</title>
 
   <style>
@@ -14,9 +14,9 @@
 
     body {
       font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      color: #111827;
-      background: #f3f4f6;
-      line-height: 1.6;
+      background: #050915;
+      color: #f5f5f5;
+      line-height: 1.5;
     }
 
     a {
@@ -24,329 +24,292 @@
       text-decoration: none;
     }
 
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
     header {
-      background: #0f172a;
-      color: #f9fafb;
-      padding: 16px 20px;
       position: sticky;
       top: 0;
-      z-index: 10;
+      z-index: 50;
+      background: rgba(5, 9, 21, 0.95);
+      border-bottom: 1px solid #1f2a3d;
+      backdrop-filter: blur(8px);
     }
 
     .nav-inner {
-      max-width: 1040px;
+      max-width: 1100px;
       margin: 0 auto;
+      padding: 0.75rem 1rem;
       display: flex;
       align-items: center;
       justify-content: space-between;
+      gap: 1rem;
     }
 
-    .logo {
-      font-weight: 800;
+    .logo-text {
+      font-weight: 700;
       letter-spacing: 0.08em;
+      font-size: 0.9rem;
       text-transform: uppercase;
-      font-size: 0.9rem;
     }
 
-    .nav-links {
-      display: flex;
-      gap: 20px;
+    nav a {
       font-size: 0.9rem;
-    }
-
-    .nav-links a {
+      margin-left: 1rem;
       opacity: 0.85;
     }
 
-    .nav-links a:hover {
+    nav a:hover {
       opacity: 1;
     }
 
     .btn {
       display: inline-block;
-      padding: 10px 20px;
+      padding: 0.7rem 1.4rem;
       border-radius: 999px;
-      font-weight: 600;
-      font-size: 0.95rem;
       border: none;
       cursor: pointer;
+      font-weight: 600;
+      font-size: 0.95rem;
+      text-align: center;
     }
 
     .btn-primary {
-      background: #0ea5e9;
-      color: #0f172a;
+      background: #00e0ff;
+      color: #001018;
     }
 
     .btn-primary:hover {
-      background: #38bdf8;
+      filter: brightness(1.1);
     }
 
     .btn-outline {
-      border: 1px solid #e5e7eb;
+      border: 1px solid #00e0ff;
+      color: #00e0ff;
       background: transparent;
-      color: #f9fafb;
+    }
+
+    .btn-outline:hover {
+      background: rgba(0, 224, 255, 0.1);
     }
 
     main {
-      max-width: 1040px;
+      max-width: 1100px;
       margin: 0 auto;
-      padding: 32px 20px 60px;
+      padding: 0 1rem 3rem;
     }
 
-    .hero {
-      display: grid;
-      grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
-      gap: 32px;
-      align-items: center;
-      padding: 32px 24px;
-      border-radius: 24px;
-      background: radial-gradient(circle at top left, #e0f2fe, #f9fafb);
-      margin-top: 24px;
-      box-shadow: 0 18px 40px rgba(15, 23, 42, 0.18);
+    /* HERO */
+
+    #hero {
+      margin-top: 1rem;
+      border-radius: 1.25rem;
+      overflow: hidden;
+      position: relative;
+      min-height: 65vh;
+      display: flex;
+      align-items: stretch;
+      background: #020510;
+    }
+
+    .hero-image {
+      flex: 1.2;
+      position: relative;
+      /* top-of-page hero image */
+      background-image: url("whiteice-tube.jpg");
+      background-size: cover;
+      background-position: center;
+    }
+
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(circle at top left, rgba(0, 224, 255, 0.5), transparent),
+        linear-gradient(to top, rgba(5, 9, 21, 0.95), rgba(5, 9, 21, 0.3));
+    }
+
+    .hero-content {
+      flex: 1;
+      padding: 2.5rem 2rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 1.25rem;
+      background:
+        radial-gradient(circle at top left, rgba(0, 224, 255, 0.2), transparent),
+        linear-gradient(to bottom, #050915, #02030a);
     }
 
     .hero-kicker {
+      font-size: 0.85rem;
       text-transform: uppercase;
-      font-weight: 700;
-      font-size: 0.8rem;
-      letter-spacing: 0.16em;
-      color: #0369a1;
-      margin-bottom: 8px;
+      letter-spacing: 0.12em;
+      color: #7de9ff;
     }
 
-    .hero h1 {
-      font-size: 2rem;
-      line-height: 1.15;
-      margin-bottom: 12px;
-      color: #0f172a;
+    .hero-title {
+      font-size: 2.1rem;
+      line-height: 1.1;
     }
 
-    .hero-sub {
+    .hero-title span {
+      color: #00e0ff;
+    }
+
+    .hero-subtitle {
       font-size: 0.98rem;
-      color: #4b5563;
-      margin-bottom: 18px;
-    }
-
-    .hero-bullets {
-      list-style: none;
-      margin-bottom: 20px;
-      font-size: 0.9rem;
-      color: #111827;
-    }
-
-    .hero-bullets li {
-      margin-bottom: 4px;
-    }
-
-    .hero-bullets li::before {
-      content: "• ";
-      color: #0ea5e9;
-      font-weight: 900;
-    }
-
-    .hero-cta {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      align-items: center;
-      margin-bottom: 8px;
-    }
-
-    .hero-note {
-      font-size: 0.8rem;
-      color: #6b7280;
-    }
-
-    .hero-image-box {
-      background: linear-gradient(145deg, #0f172a, #0b1120);
-      border-radius: 24px;
-      padding: 20px;
-      color: #e5e7eb;
-      position: relative;
-      overflow: hidden;
-      min-height: 220px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-    }
-
-    .hero-tag {
-      font-size: 0.75rem;
-      text-transform: uppercase;
-      letter-spacing: 0.16em;
-      opacity: 0.75;
-    }
-
-    .hero-product-name {
-      font-size: 1.25rem;
-      font-weight: 700;
-      margin-top: 6px;
-      margin-bottom: 4px;
-    }
-
-    .hero-pill {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      padding: 4px 10px;
-      font-size: 0.75rem;
-      border-radius: 999px;
-      background: rgba(15,23,42,0.7);
-      border: 1px solid rgba(148,163,184,0.4);
-      margin-top: 6px;
-    }
-
-    .hero-pill-dot {
-      width: 7px;
-      height: 7px;
-      border-radius: 999px;
-      background: #22c55e;
+      max-width: 27rem;
+      opacity: 0.9;
     }
 
     .hero-price {
-      font-size: 0.8rem;
-      color: #9ca3af;
-      margin-top: 10px;
+      font-size: 0.9rem;
+      margin-top: 0.25rem;
+      opacity: 0.9;
     }
 
-    .hero-caption {
+    .hero-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
       font-size: 0.8rem;
-      color: #9ca3af;
-      margin-top: 18px;
-      max-width: 220px;
+    }
+
+    .badge {
+      padding: 0.28rem 0.7rem;
+      border-radius: 999px;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      background: rgba(5, 9, 21, 0.8);
+      backdrop-filter: blur(6px);
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.7rem;
+      margin-top: 0.5rem;
     }
 
     section {
-      margin-top: 48px;
+      margin-top: 3rem;
     }
 
-    section h2 {
-      font-size: 1.4rem;
-      margin-bottom: 8px;
-      color: #0f172a;
+    .section-heading {
+      font-size: 1.3rem;
+      margin-bottom: 0.25rem;
     }
 
-    section p.lead {
-      font-size: 0.95rem;
-      color: #4b5563;
-      margin-bottom: 16px;
-      max-width: 620px;
-    }
-
-    .cards {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 16px;
-      margin-top: 12px;
-    }
-
-    .card {
-      background: #ffffff;
-      border-radius: 16px;
-      padding: 16px;
-      box-shadow: 0 6px 18px rgba(15, 23, 42, 0.08);
+    .section-sub {
       font-size: 0.9rem;
+      opacity: 0.8;
+      margin-bottom: 1.25rem;
     }
 
-    .card h3 {
-      font-size: 1rem;
-      margin-bottom: 6px;
-      color: #111827;
-    }
-
-    .for-dentists {
-      background: #0f172a;
-      color: #e5e7eb;
-      border-radius: 24px;
-      padding: 24px 20px;
-      display: grid;
-      grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
-      gap: 24px;
+    .split {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
       align-items: center;
     }
 
-    .for-dentists h2 {
-      color: #f9fafb;
+    .split > div {
+      flex: 1 1 260px;
     }
 
-    .for-dentists p.lead {
-      color: #e5e7eb;
+    .card {
+      border-radius: 1rem;
+      background: linear-gradient(145deg, #050915, #0b1324);
+      border: 1px solid #1a273d;
+      padding: 1.25rem;
     }
 
-    .for-dentists-list {
-      font-size: 0.9rem;
-      margin-top: 8px;
+    .card h3 {
+      margin-bottom: 0.5rem;
     }
 
-    .for-dentists-list li {
-      margin-bottom: 4px;
+    .card p {
+      font-size: 0.92rem;
+      opacity: 0.88;
     }
 
-    .for-dentists-note {
+    .highlight {
+      color: #00e0ff;
+      font-weight: 600;
+    }
+
+    .pill-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      margin-top: 0.6rem;
       font-size: 0.8rem;
-      color: #9ca3af;
-      margin-top: 6px;
     }
 
-    .dentists-side {
-      font-size: 0.85rem;
-      color: #cbd5f5;
-      border-left: 1px solid rgba(148, 163, 184, 0.6);
-      padding-left: 16px;
+    .pill {
+      padding: 0.2rem 0.6rem;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.1);
     }
 
-    .contact {
+    .dentist-cta {
+      margin-top: 1rem;
+    }
+
+    /* GALLERY */
+
+    .gallery-grid {
       display: grid;
-      grid-template-columns: minmax(0, 2.2fr) minmax(0, 2fr);
-      gap: 20px;
-      align-items: start;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 1rem;
     }
 
-    .contact-box {
-      background: #ffffff;
-      border-radius: 16px;
-      padding: 16px;
-      box-shadow: 0 6px 18px rgba(15, 23, 42, 0.08);
-      font-size: 0.9rem;
+    .gallery-item {
+      border-radius: 0.75rem;
+      overflow: hidden;
+      border: 1px solid #1a273d;
+      background: #050915;
     }
 
-    .contact-row {
-      margin-bottom: 6px;
+    .gallery-item img {
+      width: 100%;
+      height: auto;
     }
 
-    .contact-label {
-      font-size: 0.8rem;
-      text-transform: uppercase;
-      letter-spacing: 0.14em;
-      color: #9ca3af;
-      margin-bottom: 2px;
+    .gallery-caption {
+      padding: 0.7rem 0.8rem;
+      font-size: 0.85rem;
+      opacity: 0.85;
     }
 
     footer {
-      margin-top: 40px;
-      padding: 18px 20px 28px;
+      margin-top: 3rem;
+      padding: 1.5rem 0 0.5rem;
+      border-top: 1px solid #1f2a3d;
+      font-size: 0.85rem;
+      opacity: 0.8;
       text-align: center;
-      font-size: 0.8rem;
-      color: #6b7280;
     }
 
     @media (max-width: 800px) {
-      .hero,
-      .for-dentists,
-      .contact {
-        grid-template-columns: minmax(0, 1fr);
+      #hero {
+        flex-direction: column-reverse;
+        min-height: auto;
       }
 
-      .hero {
-        padding: 24px 18px;
+      .hero-content {
+        padding: 1.8rem 1.4rem 2.1rem;
       }
 
-      .cards {
-        grid-template-columns: minmax(0, 1fr);
+      .hero-title {
+        font-size: 1.7rem;
       }
 
-      .nav-links {
-        display: none;
+      .nav-inner {
+        flex-wrap: wrap;
       }
     }
   </style>
@@ -354,10 +317,13 @@
 <body>
   <header>
     <div class="nav-inner">
-      <div class="logo">WHITESCiENCE</div>
-      <nav class="nav-links">
-        <a href="#product">Product</a>
+      <div class="logo-text">WhiteICE &nbsp;|&nbsp; WhiteScience</div>
+      <nav>
+        <a href="#hero">Home</a>
+        <a href="#product">Toothpaste</a>
         <a href="#dentists">For Dentists</a>
+        <a href="#gallery">Products</a>
+        <a href="#gift-box">Gift Box</a>
         <a href="#contact">Contact</a>
       </nav>
     </div>
@@ -365,170 +331,342 @@
 
   <main>
     <!-- HERO -->
-    <section class="hero">
-      <div>
-        <div class="hero-kicker">WhiteICE • WSWWINC</div>
-        <h1>The World’s First<br>Carnauba Wax Toothpaste</h1>
-        <p class="hero-sub">
-          WhiteICE protects the pores of your teeth from coffee, tea, and wine for up to 6 hours —
-          delivering <strong>22x the strength</strong> of your over-the-counter toothpaste.
+    <section id="hero">
+      <div class="hero-content">
+        <div class="hero-kicker">WhiteICE by WSWWINC</div>
+        <h1 class="hero-title">
+          The World’s First <span>Carnauba Wax</span> Toothpaste
+        </h1>
+        <p class="hero-subtitle">
+          WhiteICE protects the pores of your teeth from coffee, tea, and wine
+          for up to 6 hours — with up to <span class="highlight">22× the strength</span>
+          of over-the-counter toothpaste.
+        </p>
+        <p class="hero-price">
+          <strong>$60</strong> &bull; 4.5 oz WhiteICE Carnauba Wax Toothpaste
         </p>
 
-        <ul class="hero-bullets">
-          <li>Carnauba wax “shield” technology to block stains between brushes</li>
-          <li>Designed for everyday whitening without sensitivity</li>
-          <li>Perfect for coffee, tea, and red-wine lovers</li>
-        </ul>
-
-        <div class="hero-cta">
-          <!-- If you get a real shop link later, replace the # with your URL -->
-          <a href="mailto:WSWWINC@yahoo.com?subject=WhiteICE%20Order" class="btn btn-primary">
-            Shop WhiteICE (Email to Order)
-          </a>
-          <a href="#dentists" class="btn btn-outline">
-            For Dental Offices
-          </a>
+        <div class="hero-badges">
+          <span class="badge">Carnauba Wax Protection</span>
+          <span class="badge">Coffee • Tea • Wine Defense</span>
+          <span class="badge">Designed for Dental Professionals</span>
         </div>
 
-        <div class="hero-note">
-          Questions? Call or text <strong>(254) 217-4923</strong> or email <strong>WSWWINC@yahoo.com</strong>
+        <div class="hero-actions">
+          <a href="#product" class="btn btn-primary">Shop Toothpaste</a>
+          <a href="#dentists" class="btn btn-outline">For Dentists</a>
         </div>
       </div>
 
-      <div class="hero-image-box">
-        <div>
-          <div class="hero-tag">Premium Whitening • Daily Defense</div>
-          <div class="hero-product-name">WhiteICE Carnauba Wax Toothpaste</div>
-          <div class="hero-pill">
-            <span class="hero-pill-dot"></span>
-            <span>6-Hour Coffee • Tea • Wine Shield</span>
-          </div>
-          <div class="hero-price">
-            Professional-grade formula • Retail & in-office programs available
-          </div>
-        </div>
-        <p class="hero-caption">
-          Replace your current toothpaste with a formula that not only whitens, but
-          helps seal the tooth surface between sips and snacks.
-        </p>
+      <div class="hero-image">
+        <div class="hero-overlay"></div>
       </div>
     </section>
 
-    <!-- PRODUCT HIGHLIGHTS -->
+    <!-- PRODUCT / TOOTHPASTE SECTION -->
     <section id="product">
-      <h2>Why WhiteICE?</h2>
-      <p class="lead">
-        WhiteICE was built for real life: long workdays, busy patients, and people who
-        don’t want to give up coffee, tea, or wine just to keep their smile bright.
-      </p>
+      <h2 class="section-heading">WhiteScience Multi-Action Whitening Toothpaste</h2>
+      <p class="section-sub">Daily whitening, stain release &amp; enamel support</p>
 
-      <div class="cards">
+      <div class="split">
         <div class="card">
-          <h3>Carnauba Wax Technology</h3>
+          <h3>Complete Care for Everyday Whitening</h3>
           <p>
-            Carnauba wax — known from premium car waxes — is adapted into a
-            cosmetic-grade formula to help protect the pores of enamel from staining
-            pigments between brushes.
+            WhiteScience Multi-Action Whitening Toothpaste is a unique formulation that
+            removes stains and whitens teeth in two ways: a mild abrasive breaks the
+            surface tension of stains so a natural whitening agent can lift them away
+            from tooth enamel. Its alcohol-free freshmint formula cleans with comfort,
+            leaving a pleasing, cooling sensation that keeps your mouth feeling clean
+            and your breath fresh.
           </p>
+
+          <p style="margin-top:0.6rem;">
+            A dynamic combination of ingredients formulated to provide total care:
+          </p>
+          <ul style="margin-top:0.4rem; padding-left:1.2rem; font-size:0.9rem; opacity:0.9;">
+            <li><strong>Stain Releasing Action:</strong> papaya extract, a natural enzyme,
+              breaks down film on your teeth so stains can be released and cleansed away.</li>
+            <li><strong>Cleansing:</strong> dicalcium phosphate works as a mild abrasive,
+              like tiny scrubbers, to remove stains released by the papaya extract.</li>
+            <li><strong>Whitening:</strong> dicalcium phosphate, properly combined with
+              hydrated silica, helps remove both stains and plaque.</li>
+            <li><strong>Enamel Strengthening:</strong> sorbitol, kaolin and fluoride work
+              together to reduce decay, remineralise weakened enamel and improve the
+              toughness and opacity of tooth enamel.</li>
+          </ul>
+
+          <p style="margin-top:0.8rem; font-size:0.95rem;">
+            <strong>$29.99</strong> &bull; 4.0 oz tube
+          </p>
+
+          <div class="pill-row">
+            <span class="pill">Papaya Enzyme Stain Release</span>
+            <span class="pill">Enamel Strengthening</span>
+            <span class="pill">Freshmint • Alcohol Free</span>
+          </div>
+
+          <div style="margin-top:1.1rem;">
+            <a class="btn btn-primary" href="mailto:WSWWINC@yahoo.com?subject=Multi-Action%20Toothpaste%20Order%20Inquiry">
+              Email to Order Toothpaste
+            </a>
+          </div>
         </div>
-        <div class="card">
-          <h3>22× Over-the-Counter Strength</h3>
-          <p>
-            Professional-level whitening ingredients with a smoother feel than harsh,
-            gritty pastes — designed for consistent, everyday use.
-          </p>
-        </div>
-        <div class="card">
-          <h3>Perfect Pair for In-Office Whitening</h3>
-          <p>
-            Use WhiteICE as the “take-home” maintenance step after chairside whitening
-            to help patients protect their investment and keep shades stable.
-          </p>
+
+        <div>
+          <!-- PRODUCT IMAGE -->
+          <img src="IMG_1169.jpeg" alt="WhiteScience Multi-Action Whitening Toothpaste" />
         </div>
       </div>
     </section>
 
-    <!-- FOR DENTISTS -->
-    <section id="dentists" class="for-dentists">
-      <div>
-        <h2>For Dental Professionals</h2>
-        <p class="lead">
-          ArtisteDental WSWWINC is the Dentist’s Best Friend.
-        </p>
-        <p class="lead">
-          We specialize in the retail and consumer teeth-whitening market and understand the
-          challenges dental offices face when building and satisfying their patient base with
-          affordable, convenient, and time-efficient whitening options.
-        </p>
-        <ul class="for-dentists-list">
-          <li>WhiteICE retail programs for your front desk or checkout area</li>
-          <li>Simple in-office displays and patient education materials</li>
-          <li>Designed to plug into your existing whitening menu</li>
-        </ul>
-        <p class="for-dentists-note">
-          Email us at <strong>WSWWINC@yahoo.com</strong> to request info on wholesale pricing,
-          office displays, and patient marketing materials.
-        </p>
+    <!-- FOR DENTISTS SECTION -->
+    <section id="dentists">
+      <h2 class="section-heading">For Dentists</h2>
+      <p class="section-sub">ArtisteDental • WSWW INC – the Dentist’s Best Friend</p>
+
+      <div class="split">
+        <div>
+          <!-- DENTIST FLYER IMAGE -->
+          <img src="whitescience-dentist-flyer.jpg"
+               alt="WhiteICE and ArtisteDental marketing flyer for dentists" />
+        </div>
+
+        <div class="card">
+          <h3>ArtisteDental &amp; WSWW INC – The Dentist's Best Friend</h3>
+          <p>
+            Case of 12 &bull; <strong>$119.99</strong> &mdash; wholesale pricing available.
+          </p>
+
+          <p style="margin-top:0.6rem;">
+            Specializing in the retail and consumer teeth whitening market, WSWW INC.
+            understands the challenges dentists have in building and satisfying their
+            existing patient bases with affordable, convenient and time-efficient
+            whitening treatments.
+          </p>
+
+          <p style="margin-top:0.6rem;">
+            Each ArtisteDental whitening service kit comes with:
+          </p>
+          <ul style="margin-top:0.4rem; padding-left:1.2rem; font-size:0.9rem; opacity:0.9;">
+            <li>1 sealed mouth piece</li>
+            <li>1 <strong>22–44% gel booster syringe</strong></li>
+            <li>1 dental bib</li>
+            <li>2 Fresh Ups</li>
+            <li>1 finishing rinse</li>
+            <li>1 instruction card</li>
+          </ul>
+
+          <p style="margin-top:0.6rem;">
+            SpaWhite — “a brighter smile at the speed of light” — and our
+            ArtisteDental systems deliver instant results your patients can see.
+            For most people, average whitening results are an immediate 6–8 shade
+            increase in only 20 minutes, and with SpaWhite Express we often see
+            10–14 shade improvement in about 30 minutes.
+          </p>
+
+          <p style="margin-top:0.6rem;">
+            Call WSWW INC. to find out how our products and marketing programs are
+            designed for the dental professional so you can bring the success of
+            teeth whitening into your office.
+          </p>
+
+          <div class="dentist-cta">
+            <a class="btn btn-primary"
+               href="mailto:WSWWINC@yahoo.com?subject=Dentist%20Program%20Information">
+              Email WSWWINC@yahoo.com
+            </a>
+          </div>
+        </div>
       </div>
 
-      <div class="dentists-side">
-        <p><strong>Designed for your workflow:</strong></p>
+      <!-- TESTIMONIALS IMAGE -->
+      <div style="margin-top: 1.5rem;">
+        <img src="IMG_1170.jpeg"
+             alt="WhiteScience dental testimonials and recommendations from dental professionals" />
+      </div>
+    </section>
+
+    <!-- PRODUCT GALLERY -->
+    <section id="gallery">
+      <h2 class="section-heading">WhiteICE &amp; WhiteScience Products</h2>
+      <p class="section-sub">Key products and systems for whitening and maintenance.</p>
+
+      <div class="gallery-grid">
+        <!-- WhiteICE maintenance stick + kit -->
+        <div class="gallery-item">
+          <img src="IMG_1167.jpeg"
+               alt="WhiteICE whitening maintenance stick and packaging" />
+          <div class="gallery-caption">
+            <strong>WhiteICE Maintenance Stick &mdash; $59.99</strong><br>
+            6× the strength of Crest Whitestrips with no reported sensitivity when
+            used as directed. Once a boutique product only available through the
+            dentist’s office, WhiteICE was named one of the top 100 Dental Products
+            when it launched in 2007.
+            <ul style="margin-top:0.45rem; padding-left:1.1rem;">
+              <li>Patent-pending microencapsulation keeps real peroxide stable until
+                  it activates with heat and moisture in the mouth.</li>
+              <li>Time-release peroxide bathes the teeth evenly for effective
+                  whitening with less chance of discomfort.</li>
+              <li>About 40 upper-and-lower applications per stick for daily stain
+                  maintenance.</li>
+              <li>Material emulsifies with saliva and disappears, reaching between
+                  teeth and irregular surfaces for total coverage.</li>
+              <li>Use as maintenance between primary whitening treatments like
+                  SpaWhite, SolarWhite or Artiste.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- SolarWhite sun-powered whitening kit -->
+        <div class="gallery-item">
+          <img src="IMG_1044.jpeg"
+               alt="SolarWhite teeth whitening by the power of the sun kit" />
+          <div class="gallery-caption">
+            <strong>SolarWhite Sun-Powered Whitening Kit &mdash; $49.99</strong><br>
+            SolarWhite whitens your teeth while you lie in a tanning bed or
+            sunbathe at the beach, pool, or in your own backyard. See immediate
+            results of about 4–6 shades after just one 10-minute treatment.
+            <ul style="margin-top:0.45rem; padding-left:1.1rem;">
+              <li>Patented self-forming foam pads impregnated with neutral pH peroxide.</li>
+              <li>Mouth rinse to finish the treatment.</li>
+              <li>2 Fresh Ups for quick cleaning and fresh breath.</li>
+              <li>Instruction card for easy, step-by-step use.</li>
+              <li>Protective thermal bag for safe storage of foam pads.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Daylight 5K LED Whitening System -->
+        <div class="gallery-item">
+          <img src="IMG_1168.jpeg"
+               alt="Daylight 5K LED whitening light system with flexible tray and whitening kit" />
+          <div class="gallery-caption">
+            <strong>Daylight 5K LED Whitening System &mdash; $1,499.99</strong><br>
+            WSWWINC’s professional LED light is a stand-alone system designed
+            for chairside whitening. It is sold by itself; gels and kits are
+            ordered separately.
+            <ul style="margin-top:0.45rem; padding-left:1.1rem;">
+              <li><strong>Light:</strong> Daylight 5K LEDs accelerate conversion of
+                  hydrogen peroxide into powerful whitening hydroxyl radicals,
+                  with the flexible mouth tray acting as a lens to focus light.</li>
+              <li><strong>Pressure:</strong> once inserted into the flexible tray, mild
+                  pressure conforms the patented peroxide strip to the shape of the
+                  teeth, helping drive hydroxyl radicals into enamel.</li>
+              <li><strong>Heat:</strong> gentle heat from the exclusive Daylight 5K
+                  light system helps release whitening radicals while remaining
+                  barely noticeable.</li>
+              <li><strong>Exposure:</strong> controlled exposure time is key —
+                  technology can brighten a smile in as little as 30 minutes with
+                  incredible results.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- SpaWhite in-spa whitening kit -->
+        <div class="gallery-item">
+          <img src="IMG_1045.jpeg"
+               alt="SpaWhite in-spa whitening kit with Fresh Ups" />
+          <div class="gallery-caption">
+            <strong>SpaWhite In-Spa Whitening Kit &mdash; Package of 12 • $119.99</strong><br>
+            “A brighter smile at the speed of light.” SpaWhite is designed for spa
+            environments where people demand instant results and comfort.
+            <ul style="margin-top:0.45rem; padding-left:1.1rem;">
+              <li>Each case contains 12 individually packaged service kits.</li>
+              <li>Every kit includes:
+                <ul style="margin-top:0.25rem; padding-left:1.1rem;">
+                  <li>1 sealed mouth piece</li>
+                  <li>1 <strong>22% gel booster syringe</strong></li>
+                  <li>1 dental bib</li>
+                  <li>2 Fresh Ups</li>
+                  <li>1 finishing rinse</li>
+                  <li>1 instruction card</li>
+                </ul>
+              </li>
+              <li>Average whitening results of 6–8 shades in only 20 minutes.</li>
+              <li>SpaWhite Express can deliver 10–14 shades of improvement in about 30 minutes.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- GIFT BOX SECTION -->
+    <section id="gift-box">
+      <h2 class="section-heading">WSWWINC Gift Box</h2>
+      <p class="section-sub">Dental-awarded take-home maintenance kit &amp; ready-to-give gift</p>
+
+      <div class="card">
         <p>
-          • Quick to recommend chairside<br>
-          • Easy for team members to explain<br>
-          • Fits into recall, whitening upgrades, and cosmetic consults
+          <strong>$79.99</strong> &mdash; a complete maintenance kit for freshly whitened teeth that
+          also makes a perfect gift for a special loved one or for yourself.
         </p>
-        <p style="margin-top:10px;">
-          Whether you’re a solo practice or a multi-location group, our goal is to make
-          teeth whitening simpler and more profitable — while giving patients an easy way
-          to keep their smile bright between visits.
+
+        <p style="margin-top:0.6rem;">
+          The WSWW INC. gift box is both a thoughtful gift and a professional, after-whitening
+          take-home kit. It contains everything you need to help maintain your new, brighter smile:
+        </p>
+
+        <ul style="margin-top:0.45rem; padding-left:1.2rem; font-size:0.9rem; opacity:0.9;">
+          <li>1 tube of luxurious <strong>Multi-Action Whitening Toothpaste</strong>.</li>
+          <li>1 <strong>WhiteICE stick</strong> for whitening touch-ups on the go.</li>
+          <li>20 <strong>Fresh Ups</strong>, gentle teeth-cleaning wipes.</li>
+          <li>Two convenience carrying cases:
+            <ul style="margin-top:0.25rem; padding-left:1.1rem;">
+              <li>One attractive mesh case, perfect for a handbag.</li>
+              <li>One smaller, business-card-sized carrier that men love.</li>
+            </ul>
+          </li>
+        </ul>
+
+        <p style="margin-top:0.7rem; font-size:0.9rem; opacity:0.95;">
+          Everything comes in a lovely box that doesn’t even need wrapping — it’s gift-ready
+          straight from your office or practice.
+        </p>
+
+        <p style="margin-top:0.5rem; font-size:0.9rem; font-style:italic;">
+          Wholesale pricing is available.
         </p>
       </div>
     </section>
 
     <!-- CONTACT -->
     <section id="contact">
-      <h2>Contact & Ordering</h2>
-      <p class="lead">
-        Ready to bring WhiteICE into your home or your dental office? Reach out directly
-        and we’ll walk you through retail, wholesale, and marketing options.
-      </p>
+      <h2 class="section-heading">Contact &amp; Location</h2>
+      <p class="section-sub">Showroom, orders, and dentist program information</p>
 
-      <div class="contact">
-        <div class="contact-box">
-          <div class="contact-row">
-            <div class="contact-label">Call or Text</div>
-            <div><a href="tel:12542174923">(254) 217-4923</a></div>
-          </div>
-          <div class="contact-row">
-            <div class="contact-label">Email</div>
-            <div><a href="mailto:WSWWINC@yahoo.com">WSWWINC@yahoo.com</a></div>
-          </div>
-          <div class="contact-row">
-            <div class="contact-label">Business</div>
-            <div>WSWWINC / WhiteScience – Teeth Whitening & Carnauba Wax Toothpaste</div>
-          </div>
-        </div>
+      <div class="card">
+        <p>
+          <strong>Location:</strong><br>
+          3651 Allen Avenue<br>
+          Arlington, Texas 76014<br>
+          United States
+        </p>
 
-        <div class="contact-box">
-          <div class="contact-label">What to include in your email</div>
-          <p>
-            • Are you a <strong>customer</strong> or a <strong>dental office</strong>?<br>
-            • How many tubes are you interested in?<br>
-            • Shipping city & state (for a quick estimate)<br>
-            • Any questions about ingredients or usage
-          </p>
-        </div>
+        <p style="margin-top:0.6rem;">
+          <strong>Phone:</strong>
+          <a href="tel:12542174923">1 (254) 217-4923</a>
+        </p>
+
+        <p style="margin-top:0.4rem;">
+          <strong>Email:</strong>
+          <a href="mailto:WSWWINC@yahoo.com">WSWWINC@yahoo.com</a>
+        </p>
+
+        <p style="margin-top:0.6rem; font-size:0.9rem; opacity:0.9;">
+          Reach out for wholesale pricing, retail displays, and dental office
+          programs for WhiteICE, SpaWhite, SolarWhite, Daylight 5K, the Gift Box
+          and other WhiteScience products.
+        </p>
       </div>
     </section>
+
+    <footer>
+      &copy; <span id="year"></span> WSWWINC • WhiteScience • WhiteICE. All rights reserved.
+    </footer>
   </main>
 
-  <footer>
-    © <span id="year"></span> WhiteScience / WSWWINC. All rights reserved.
-  </footer>
-
   <script>
-    // Set current year in footer automatically
+    // Auto-set year in footer
     document.getElementById("year").textContent = new Date().getFullYear();
   </script>
 </body>
