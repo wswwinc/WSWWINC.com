@@ -391,6 +391,23 @@ section {
   -webkit-hyphens: none;
 }
 
+/* NEW: prevent text overflow and keep everything inside the panels */
+.panel-body,
+.section-intro,
+.key-list,
+.contact-sub,
+.contact-row {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  max-width: 100%;
+}
+
+/* keep hero-sub tight but still safe */
+.hero-sub {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+}
+
 .key-list {
   list-style: none;
   padding: 0;
@@ -516,6 +533,15 @@ footer {
 .reveal.visible {
   opacity: 1;
   transform: translateY(0);
+}
+
+/* Extra mobile padding tweak so text doesn’t feel cramped */
+@media (max-width: 600px) {
+  .panel-body,
+  .section-intro,
+  .hero-sub {
+    padding-inline: 4px;
+  }
 }
 
 /* ========== RESPONSIVE ========== */
