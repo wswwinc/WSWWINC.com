@@ -19,7 +19,9 @@
       --shadow-soft: 0 18px 45px rgba(15, 23, 42, 0.08);
     }
 
-    * { box-sizing: border-box; }
+    * {
+      box-sizing: border-box;
+    }
 
     body {
       margin: 0;
@@ -42,13 +44,13 @@
       text-decoration: none;
     }
 
+    /* Layout shell */
+
     .page {
       max-width: 1120px;
       margin: 0 auto;
       padding: 24px 16px 72px;
     }
-
-    /* HEADER */
 
     header {
       display: flex;
@@ -77,7 +79,9 @@
       text-transform: uppercase;
     }
 
-    .logo-mark span { color: var(--accent); }
+    .logo-mark span {
+      color: var(--accent);
+    }
 
     .logo-sub {
       font-size: 11px;
@@ -98,7 +102,6 @@
       position: relative;
       padding-bottom: 4px;
       color: #4b5563;
-      white-space: nowrap;
     }
 
     .nav-links a::after {
@@ -112,9 +115,11 @@
       transition: width 0.18s ease;
     }
 
-    .nav-links a:hover::after { width: 100%; }
+    .nav-links a:hover::after {
+      width: 100%;
+    }
 
-    /* HERO */
+    /* Hero */
 
     .hero {
       display: grid;
@@ -139,7 +144,9 @@
       margin: 0 0 14px;
     }
 
-    .hero-title span { color: var(--accent); }
+    .hero-title span {
+      color: var(--accent);
+    }
 
     .hero-sub {
       font-size: 15px;
@@ -194,39 +201,6 @@
     .btn-ghost:hover {
       border-color: var(--accent);
       background: var(--accent-soft);
-    }
-
-    /* BLUE GLOW BUY BUTTONS */
-
-    .btn-buy {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      padding: 9px 18px;
-      margin-top: 16px;
-      border-radius: 999px;
-      background: radial-gradient(circle at top, #7dd3fc, #0ea5e9);
-      box-shadow: 0 0 18px rgba(59, 130, 246, 0.75);
-      border: none;
-      font-size: 12px;
-      font-weight: 500;
-      text-transform: uppercase;
-      letter-spacing: 0.16em;
-      color: #020617;
-      cursor: pointer;
-      transition: transform 0.15s ease, box-shadow 0.15s ease, filter 0.15s ease;
-    }
-
-    .btn-buy span.price {
-      margin-left: 8px;
-      font-weight: 600;
-      font-size: 13px;
-    }
-
-    .btn-buy:hover {
-      transform: translateY(-1px);
-      box-shadow: 0 0 26px rgba(37, 99, 235, 0.95);
-      filter: brightness(1.06);
     }
 
     .hero-meta {
@@ -293,9 +267,11 @@
       background: var(--accent);
     }
 
-    /* GENERIC SECTIONS */
+    /* Generic sections */
 
-    section { margin-bottom: 56px; }
+    section {
+      margin-bottom: 56px;
+    }
 
     .section-label {
       font-size: 11px;
@@ -345,7 +321,9 @@
       font-size: 13px;
     }
 
-    .key-list li { margin-bottom: 6px; }
+    .key-list li {
+      margin-bottom: 6px;
+    }
 
     .chip-row {
       display: flex;
@@ -365,7 +343,7 @@
       color: #111827;
     }
 
-    /* PRODUCT IMAGES */
+    /* Product images */
 
     .product-image {
       border-radius: 18px;
@@ -403,14 +381,7 @@
       border-radius: 22px;
     }
 
-    /* Dentist image stack */
-    .dentist-stack {
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-    }
-
-    /* CONTACT */
+    /* Contact */
 
     .contact-card {
       background: linear-gradient(135deg, #f5fbff, #ffffff);
@@ -440,7 +411,9 @@
       font-size: 14px;
     }
 
-    .contact-row span { font-weight: 600; }
+    .contact-row span {
+      font-weight: 600;
+    }
 
     footer {
       margin-top: 40px;
@@ -449,7 +422,7 @@
       text-align: center;
     }
 
-    /* RESPONSIVE */
+    /* Responsive */
 
     @media (max-width: 880px) {
       header {
@@ -469,11 +442,17 @@
         padding-top: 28px;
       }
 
-      .hero-card { order: -1; }
+      .hero-card {
+        order: -1;
+      }
 
-      .panel-split { grid-template-columns: 1fr; }
+      .panel-split {
+        grid-template-columns: 1fr;
+      }
 
-      .page { padding-inline: 14px; }
+      .page {
+        padding-inline: 14px;
+      }
     }
   </style>
 </head>
@@ -566,12 +545,9 @@
               <div class="chip">Carnauba wax formula</div>
               <div class="chip">Coffee · Tea · Wine</div>
             </div>
-            <a class="btn-buy"
-               href="mailto:WSWWINC@yahoo.com?subject=Order%20-%20WhiteICE%20Toothpaste">
-              Buy Now <span class="price">$60</span>
-            </a>
           </div>
           <div>
+            <!-- WhiteICE bottles image -->
             <img
               src="IMG_1218.jpeg"
               alt="WhiteICE carnauba wax toothpaste bottles"
@@ -593,6 +569,7 @@
 
         <div class="panel panel-split">
           <div>
+            <!-- Gift box image -->
             <img
               src="IMG_1168.jpeg"
               alt="WhiteScience gift box set"
@@ -611,11 +588,6 @@
               <li>• Ideal for gifting, events and VIP patients</li>
               <li>• Supports premium pricing in your office</li>
             </ul>
-            <!-- UPDATED PRICE -->
-            <a class="btn-buy"
-               href="mailto:WSWWINC@yahoo.com?subject=Order%20-%20WhiteScience%20Gift%20Box">
-              Buy Now <span class="price">$79.99</span>
-            </a>
           </div>
         </div>
       </section>
@@ -648,12 +620,9 @@
               <div class="chip">Chairside efficiency</div>
               <div class="chip">Lifetime warranty</div>
             </div>
-            <a class="btn-buy"
-               href="mailto:WSWWINC@yahoo.com?subject=Order%20-%20Daylight%205K%20Light">
-              Buy Now <span class="price">$2,495</span>
-            </a>
           </div>
           <div>
+            <!-- Daylight 5K image -->
             <img
               src="IMG_1177.jpeg"
               alt="Daylight 5K Series 2 teeth whitening light"
@@ -692,19 +661,9 @@
               <li>• Support for staff training and in-office rollout</li>
               <li>• Co-branded marketing assets for your office</li>
             </ul>
-            <a class="btn-buy"
-               href="mailto:WSWWINC@yahoo.com?subject=Dentist%20Program%20Inquiry">
-              Get Started <span class="price">from $499</span>
-            </a>
           </div>
-
-          <!-- Artiste + flyer stack -->
-          <div class="dentist-stack">
-            <img
-              src="IMG_1046.jpeg"
-              alt="Artiste by WhiteScience professional whitening tray"
-              class="product-image dentist"
-            >
+          <div>
+            <!-- Dentist flyer image -->
             <img
               src="whitescience-dentist-flyer.jpg"
               alt="WhiteScience dentist marketing flyer"
@@ -743,12 +702,9 @@
                 <div class="chip">Training</div>
                 <div class="chip">Co-branded assets</div>
               </div>
-              <a class="btn-buy"
-                 href="mailto:WSWWINC@yahoo.com?subject=Wholesale%20WhiteScience%20Program">
-                Buy Starter Kit <span class="price">$999</span>
-              </a>
             </div>
             <div>
+              <!-- Wholesale spaWHITE kit image -->
               <img
                 src="IMG_1043.jpeg"
                 alt="spaWHITE professional whitening products"
@@ -787,6 +743,7 @@
   </div>
 
   <script>
+    // simple current year for footer
     document.getElementById("year").textContent = new Date().getFullYear();
   </script>
 </body>
