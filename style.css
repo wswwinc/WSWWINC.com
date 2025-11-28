@@ -381,6 +381,9 @@ section {
   font-size: 14px;
   color: var(--text-muted);
   line-height: 1.7;
+  /* NEW: keep paragraphs at a comfy width and centered in the card */
+  max-width: 46rem;
+  margin-inline: auto;
 }
 
 /* Don’t break words in half */
