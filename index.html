@@ -196,7 +196,7 @@
       background: var(--accent-soft);
     }
 
-    /* NEW: BLUE GLOW BUY BUTTONS */
+    /* BLUE GLOW BUY BUTTONS */
 
     .btn-buy {
       display: inline-flex;
@@ -403,6 +403,13 @@
       border-radius: 22px;
     }
 
+    /* Dentist image stack */
+    .dentist-stack {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
     /* CONTACT */
 
     .contact-card {
@@ -559,7 +566,6 @@
               <div class="chip">Carnauba wax formula</div>
               <div class="chip">Coffee · Tea · Wine</div>
             </div>
-            <!-- BUY BUTTON – change $60 if you want -->
             <a class="btn-buy"
                href="mailto:WSWWINC@yahoo.com?subject=Order%20-%20WhiteICE%20Toothpaste">
               Buy Now <span class="price">$60</span>
@@ -605,10 +611,10 @@
               <li>• Ideal for gifting, events and VIP patients</li>
               <li>• Supports premium pricing in your office</li>
             </ul>
-            <!-- BUY BUTTON – set whatever price you like -->
+            <!-- UPDATED PRICE -->
             <a class="btn-buy"
                href="mailto:WSWWINC@yahoo.com?subject=Order%20-%20WhiteScience%20Gift%20Box">
-              Buy Now <span class="price">$120</span>
+              Buy Now <span class="price">$79.99</span>
             </a>
           </div>
         </div>
@@ -642,7 +648,6 @@
               <div class="chip">Chairside efficiency</div>
               <div class="chip">Lifetime warranty</div>
             </div>
-            <!-- BUY BUTTON – adjust price if needed -->
             <a class="btn-buy"
                href="mailto:WSWWINC@yahoo.com?subject=Order%20-%20Daylight%205K%20Light">
               Buy Now <span class="price">$2,495</span>
@@ -687,13 +692,19 @@
               <li>• Support for staff training and in-office rollout</li>
               <li>• Co-branded marketing assets for your office</li>
             </ul>
-            <!-- BUY BUTTON – “from” price for dentist starter kit -->
             <a class="btn-buy"
                href="mailto:WSWWINC@yahoo.com?subject=Dentist%20Program%20Inquiry">
               Get Started <span class="price">from $499</span>
             </a>
           </div>
-          <div>
+
+          <!-- Artiste + flyer stack -->
+          <div class="dentist-stack">
+            <img
+              src="IMG_1046.jpeg"
+              alt="Artiste by WhiteScience professional whitening tray"
+              class="product-image dentist"
+            >
             <img
               src="whitescience-dentist-flyer.jpg"
               alt="WhiteScience dentist marketing flyer"
@@ -732,7 +743,6 @@
                 <div class="chip">Training</div>
                 <div class="chip">Co-branded assets</div>
               </div>
-              <!-- BUY BUTTON – starter wholesale kit -->
               <a class="btn-buy"
                  href="mailto:WSWWINC@yahoo.com?subject=Wholesale%20WhiteScience%20Program">
                 Buy Starter Kit <span class="price">$999</span>
