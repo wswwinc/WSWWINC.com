@@ -4,9 +4,9 @@
   <meta charset="UTF-8">
   <title>Dillon Frost | WhiteScience Teeth Whitening | WSWW INC.</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Dillon Frost, owner of WSWW INC. and WhiteScience, offers professional teeth whitening systems including WhiteICE carnauba wax toothpaste, Daylight 5K Series 2 light, gift boxes and spaWHITE wholesale programs.">
+  <meta name="description" content="WhiteScience, offers professional teeth whitening systems including WhiteICE carnauba wax toothpaste, Daylight 5K Series 2 light, gift boxes and spaWHITE wholesale programs.">
   <meta name="author" content="Dillon Frost">
-  <meta name="keywords" content="Dillon Frost,WhiteScience,WSWW INC,WhiteICE,teeth whitening,Daylight 5K,spaWHITE">
+  <meta name="keywords" content="WhiteScience,WSWW INC,WhiteICE,teeth whitening,Daylight 5K,spaWHITE">
 
   <style>
     :root {
@@ -325,7 +325,7 @@
       border-radius: var(--radius-lg);
       border: 1px solid var(--border-soft);
       box-shadow: var(--shadow-soft);
-      padding: 24px 22px;
+      padding: 24px 18px;        /* slightly tighter so text has more room */
     }
 
     .panel-split {
@@ -339,7 +339,14 @@
       font-size: 14px;
       color: var(--text-muted);
       line-height: 1.7;
-      hyphens: none; /* avoid splitting words in half */
+    }
+
+    /* stop breaking words like “stain-makers” in half */
+    .hero-sub,
+    .section-intro,
+    .panel-body {
+      hyphens: none;
+      -webkit-hyphens: none;
     }
 
     .key-list {
@@ -478,7 +485,7 @@
 
       .page { padding-inline: 14px; }
 
-      .panel { padding-inline: 14px; }  /* wider text area on mobile */
+      .panel { padding-inline: 10px; }  /* more width for text on phones */
     }
   </style>
 </head>
@@ -707,7 +714,6 @@
               alt="Artiste by WhiteScience professional whitening tray"
               class="product-image dentist"
             >
-            <!-- Deleted flyer image removed here -->
             <img
               src="IMG_1170.jpeg"
               alt="WhiteScience dentist testimonials and endorsements"
