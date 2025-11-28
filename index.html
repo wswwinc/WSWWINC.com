@@ -2,9 +2,9 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title> | WhiteScience Teeth Whitening | WSWW INC.</title>
+  <title>Dillon Frost | WhiteScience Teeth Whitening | WSWW INC.</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="WhiteScience, offers professional teeth whitening systems including WhiteICE carnauba wax toothpaste, Daylight 5K Series 2 light, gift boxes and spaWHITE wholesale programs.">
+  <meta name="description" content="Dillon Frost, owner of WSWW INC. and WhiteScience, offers professional teeth whitening systems including WhiteICE carnauba wax toothpaste, Daylight 5K Series 2 light, gift boxes and spaWHITE wholesale programs.">
   <meta name="author" content="Dillon Frost">
   <meta name="keywords" content="Dillon Frost,WhiteScience,WSWW INC,WhiteICE,teeth whitening,Daylight 5K,spaWHITE">
 
@@ -74,8 +74,8 @@
     }
 
     .logo-mark {
-      font-size: 20px;
-      font-weight: 600;
+      font-size: 30px;        /* bigger WHITE SCIENCE */
+      font-weight: 700;
       letter-spacing: 0.18em;
       text-transform: uppercase;
     }
@@ -83,7 +83,7 @@
     .logo-mark span { color: var(--accent); }
 
     .logo-sub {
-      font-size: 11px;
+      font-size: 13px;        /* bigger line under it */
       text-transform: uppercase;
       letter-spacing: 0.18em;
       color: var(--text-muted);
@@ -339,6 +339,7 @@
       font-size: 14px;
       color: var(--text-muted);
       line-height: 1.7;
+      hyphens: none; /* avoid splitting words in half */
     }
 
     .key-list {
@@ -476,6 +477,8 @@
       .panel-split { grid-template-columns: 1fr; }
 
       .page { padding-inline: 14px; }
+
+      .panel { padding-inline: 14px; }  /* wider text area on mobile */
     }
   </style>
 </head>
@@ -509,9 +512,8 @@
             A <span>whiter smile</span> in the time it takes to drink your coffee.
           </h1>
           <p class="hero-sub">
-            WhiteScience and WSWW INC., led by Dillon Frost (also known for Business101),
-            bring professional-grade whitening into the real world: powerful in-office
-            systems, take-home kits, and our signature WhiteICE&nbsp;carnauba wax toothpaste.
+            WhiteScience brings you professional-grade whitening into the real world:
+            powerful in-office systems, take-home kits, and our signature WhiteICE&nbsp;carnauba wax toothpaste.
           </p>
 
           <div class="hero-actions">
@@ -669,7 +671,7 @@
         <div class="section-label">For Dentists</div>
         <h2 class="section-title">WSWW INC. is the dentist’s best friend.</h2>
         <p class="section-intro">
-          WSWW INC., led by Dillon Frost (Business101), specializes in the retail
+          WSWW INC., led by Dillon Frost, specializes in the retail
           and consumer teeth-whitening market, with programs designed specifically
           to help practices grow and retain their patient base.
         </p>
@@ -767,7 +769,7 @@
           <h2 class="contact-title">Talk to WSWW INC.</h2>
           <p class="contact-sub">
             WhiteScience and WSWW INC. are owned and operated by
-            <strong>Dillon Frost</strong> For wholesale pricing,
+            <strong>Dillon Frost</strong>. For wholesale pricing,
             in-office systems or product questions, reach out directly and
             we’ll help you choose the right WhiteScience solution.
           </p>
@@ -784,12 +786,8 @@
     </main>
 
     <footer>
-      © 2013 WhiteScience · WSWW INC. All rights reserved <span id="year"></span> WhiteScience · WSWW INC. All rights reserved.
+      © 2013 WhiteScience · WSWW INC. All rights reserved.
     </footer>
   </div>
-
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
 </body>
 </html>
