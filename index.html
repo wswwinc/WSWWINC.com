@@ -1,50 +1,832 @@
-<section class="section" id="how-it-works">
-  <div class="section-inner">
-    <div class="section-label">How It Works</div>
-    <h2 class="section-title">SpaWhite + DayLight 5K System</h2>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1, maximum-scale=1"
+  />
+  <title>WhiteScience Worldwide | WSWWINC</title>
 
-    <p class="sec-body">
-      The SpaWhite smile rejuvenation system combines a patented foam pad,
-      carbamide peroxide gel, and the DayLight 5K LED light to create a fast,
-      controlled whitening treatment. Each element plays a specific role:
-    </p>
+  <!-- SEO -->
+  <meta
+    name="description"
+    content="WhiteScience Worldwide (WSWWINC) – premium in-spa teeth whitening systems and WhiteICE carnauba wax toothpaste. Professional results for dentists, spas, and clients."
+  />
+  <meta
+    name="keywords"
+    content="WhiteScience, WhiteScience Worldwide, WSWWINC, WhiteICE toothpaste, teeth whitening, in-spa whitening, Dillon Frost, Business101"
+  />
+  <meta name="author" content="Dillon Frost" />
 
-    <p class="section-body">
-      <strong>Carbamide Peroxide&nbsp;|</strong>
-      When pH-neutral carbamide peroxide mixes with moisture in the mouth, it
-      releases hydroxyl radicals that gently penetrate the tooth structure and
-      loosen stains that have built up over time.
-    </p>
+  <style>
+    :root {
+      --accent: #43b3ff;
+      --accent-soft: #e6f4ff;
+      --text-main: #0f172a;
+      /* Darker muted text for better contrast (WCAG AA) */
+      --text-muted: #4b5563;
+      --border-soft: #e5e7eb;
+      --bg-page: #ffffff;
+      --bg-card: #f9fafb;
+      --radius-lg: 18px;
+      --radius-md: 12px;
+      --shadow-soft: 0 18px 45px rgba(15, 23, 42, 0.08);
+      --max-width: 1120px;
+    }
 
-    <p class="section-body">
-      <strong>Light&nbsp;|</strong>
-      Exposing teeth and the suspended peroxide to the LED lights of the
-      DayLight 5K accelerates the conversion of hydrogen peroxide into whitening
-      hydroxyl radicals. The flexible mouth tray acts as a lens to focus and
-      guide the light.
-    </p>
+    * {
+      box-sizing: border-box;
+    }
 
-    <p class="section-body">
-      <strong>Pressure&nbsp;|</strong>
-      Mild, even pressure is required to drive hydroxyl radicals into the
-      enamel. Once the strip is seated in the flexible mouth tray, the tray
-      conforms to the shape of the teeth to keep gel and tooth surfaces in
-      close contact.
-    </p>
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont,
+        "SF Pro Text", "Helvetica Neue", Arial, sans-serif;
+      background: var(--bg-page);
+      color: var(--text-main);
+      -webkit-font-smoothing: antialiased;
+      scroll-behavior: smooth;
+    }
 
-    <p class="section-body">
-      <strong>Heat&nbsp;|</strong>
-      Gentle heat from the DayLight 5K light system further assists in
-      releasing hydroxyl radicals. The light head is thermally stable and
-      designed so the warmth is barely noticeable while still supporting an
-      efficient reaction.
-    </p>
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
 
-    <p class="section-body">
-      <strong>Exposure&nbsp;|</strong>
-      Length of exposure is key to effective whitening. The SpaWhite /
-      DayLight 5K system is engineered so a single, well-controlled session
-      can noticeably brighten a smile in as little as 30 minutes.
-    </p>
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .page {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 24px 16px 72px;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* ========== HEADER ========== */
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      background: rgba(255, 255, 255, 0.96);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid rgba(226, 232, 240, 0.7);
+      margin: 0 -16px;
+      padding: 10px 16px 18px;
+    }
+
+    .nav-inner {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .brand {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    .logo-mark {
+      font-size: 30px;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+    }
+
+    .logo-mark span {
+      color: var(--accent);
+    }
+
+    .logo-sub {
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      color: var(--text-muted);
+    }
+
+    /* Main nav */
+
+    .nav-links {
+      display: flex;
+      gap: 18px;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: var(--text-muted);
+    }
+
+    .nav-links a {
+      position: relative;
+      padding-bottom: 4px;
+      color: var(--text-muted);
+      white-space: nowrap;
+    }
+
+    .nav-links a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 0;
+      height: 2px;
+      background: var(--accent);
+      transition: width 0.18s ease;
+    }
+
+    .nav-links a:hover {
+      color: var(--text-main);
+    }
+
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+
+    main {
+      flex: 1;
+    }
+
+    .section {
+      padding: 3.5rem 0;
+    }
+
+    .section-inner {
+      max-width: var(--max-width);
+      margin: 0 auto;
+    }
+
+    /* Hero */
+    .hero {
+      padding-top: 4rem;
+      padding-bottom: 3.5rem;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+      gap: 2.75rem;
+      align-items: center;
+    }
+
+    .hero-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      padding: 0.3rem 0.75rem;
+      border-radius: 999px;
+      background: var(--accent-soft);
+      color: #0369a1;
+      font-size: 0.75rem;
+      font-weight: 500;
+      margin-bottom: 1.25rem;
+    }
+
+    .hero-tag span.dot {
+      width: 0.35rem;
+      height: 0.35rem;
+      border-radius: 999px;
+      background: #22c55e;
+    }
+
+    .hero-title {
+      font-size: clamp(2.3rem, 4vw, 3rem);
+      line-height: 1.05;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      margin: 0 0 0.85rem;
+    }
+
+    .hero-kicker {
+      text-transform: uppercase;
+      letter-spacing: 0.24em;
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      margin-bottom: 1.85rem;
+    }
+
+    .hero-body {
+      font-size: 0.98rem;
+      color: var(--text-muted);
+      max-width: 32rem;
+      line-height: 1.6;
+      margin-bottom: 1.85rem;
+    }
+
+    .hero-cta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.85rem;
+      align-items: center;
+      margin-bottom: 1.5rem;
+    }
+
+    .btn {
+      border-radius: 999px;
+      border: none;
+      cursor: pointer;
+      font-size: 0.9rem;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      padding: 0.85rem 1.6rem;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.4rem;
+    }
+
+    .btn-primary {
+      background: #0ea5e9;
+      color: #ffffff;
+      box-shadow: 0 14px 34px rgba(56, 189, 248, 0.45);
+    }
+
+    .btn-primary:hover {
+      background: #0284c7;
+    }
+
+    .btn-ghost {
+      background: transparent;
+      color: var(--text-main);
+      border: 1px solid var(--border-soft);
+    }
+
+    .btn-ghost:hover {
+      border-color: var(--accent);
+    }
+
+    .hero-note {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+    }
+
+    .hero-right {
+      display: grid;
+      gap: 1.2rem;
+    }
+
+    .hero-card {
+      background: var(--bg-card);
+      border-radius: var(--radius-lg);
+      padding: 1.25rem 1.4rem;
+      box-shadow: var(--shadow-soft);
+      border: 1px solid rgba(148, 163, 184, 0.16);
+    }
+
+    .hero-card-label {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: var(--text-muted);
+      margin-bottom: 0.35rem;
+    }
+
+    .hero-card-main {
+      font-size: 0.95rem;
+      font-weight: 600;
+      margin-bottom: 0.3rem;
+    }
+
+    .hero-card-sub {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+    }
+
+    /* Product sections */
+    .two-column {
+      display: grid;
+      grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+      gap: 2.5rem;
+      align-items: center;
+    }
+
+    .section-label {
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      margin-bottom: 0.9rem;
+    }
+
+    .section-title {
+      font-size: 1.6rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      margin-bottom: 0.85rem;
+    }
+
+    .section-body {
+      font-size: 0.97rem;
+      line-height: 1.7;
+      color: var(--text-muted);
+      margin-bottom: 1.4rem;
+    }
+
+    .pill-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+      margin-bottom: 1.4rem;
+    }
+
+    .pill {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      padding: 0.35rem 0.9rem;
+      border-radius: 999px;
+      border: 1px solid var(--border-soft);
+      background: #ffffff;
+    }
+
+    .card-image {
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow-soft);
+      border: 1px solid rgba(148, 163, 184, 0.18);
+    }
+
+    /* Dentists section */
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1.25rem;
+      margin-top: 1.6rem;
+    }
+
+    .feature-card {
+      background: var(--bg-card);
+      border-radius: var(--radius-md);
+      padding: 1rem 1.1rem;
+      border: 1px solid var(--border-soft);
+      font-size: 0.88rem;
+      color: var(--text-muted);
+    }
+
+    .feature-card strong {
+      display: block;
+      font-size: 0.86rem;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      color: var(--text-main);
+      margin-bottom: 0.4rem;
+    }
+
+    /* About / WSWWINC list */
+    .about-list {
+      margin: 0 0 1.4rem;
+      padding-left: 1.1rem;
+      font-size: 0.95rem;
+      color: var(--text-muted);
+    }
+
+    .about-list li {
+      margin-bottom: 0.35rem;
+      line-height: 1.6;
+    }
+
+    /* Contact */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+      gap: 2.5rem;
+    }
+
+    .contact-card {
+      background: var(--bg-card);
+      border-radius: var(--radius-lg);
+      padding: 1.4rem 1.5rem;
+      border: 1px solid var(--border-soft);
+      box-shadow: var(--shadow-soft);
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+
+    .contact-item {
+      margin-bottom: 0.9rem;
+    }
+
+    .contact-label {
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      font-size: 0.75rem;
+      color: var(--text-muted);
+    }
+
+    .contact-value {
+      font-size: 0.95rem;
+      font-weight: 600;
+      margin-top: 0.2rem;
+    }
+
+    footer {
+      border-top: 1px solid var(--border-soft);
+      padding-top: 1.5rem;
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      margin-top: 2rem;
+    }
+
+    .footer-inner {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    @media (max-width: 880px) {
+      .hero-grid,
+      .two-column,
+      .feature-grid,
+      .contact-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .section {
+        padding: 2.8rem 0;
+      }
+
+      .hero {
+        padding-top: 3.2rem;
+      }
+
+      .hero-right {
+        order: -1;
+      }
+
+      .nav-links {
+        display: none;
+      }
+
+      header {
+        padding-inline: 12px;
+        margin: 0 -12px;
+      }
+
+      .page {
+        padding-inline: 12px;
+      }
+    }
+
+    @media (max-width: 520px) {
+      .hero {
+        padding-top: 2.4rem;
+      }
+
+      .hero-title {
+        letter-spacing: 0.17em;
+      }
+
+      .hero-grid {
+        gap: 1.9rem;
+      }
+
+      .pill-list {
+        gap: 0.45rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="page">
+    <!-- HEADER -->
+    <header>
+      <div class="nav-inner">
+        <div class="brand">
+          <div class="logo-mark">
+            WHITE<span>SCIENCE</span>
+          </div>
+          <div class="logo-sub">WORLDWIDE · WSWWINC · EST. 2013</div>
+        </div>
+        <nav class="nav-links">
+          <a href="#whiteice">WhiteICE</a>
+          <a href="#in-spa">In-Spa Whitening</a>
+          <a href="#dentists">For Dentists</a>
+          <a href="#about">About</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <!-- HERO -->
+      <section class="section hero" id="top">
+        <div class="section-inner hero-grid">
+          <div>
+            <div class="hero-tag">
+              <span class="dot"></span>
+              Professional teeth whitening systems
+            </div>
+
+            <h1 class="hero-title">WHITE SCIENCE</h1>
+            <div class="hero-kicker">WORLDWIDE · WSWWINC</div>
+
+            <p class="hero-body">
+              WhiteScience Worldwide partners with dentists, spas, and salons
+              to deliver fast, comfortable whitening and long-lasting
+              maintenance. In-office systems plus at-home care, designed to
+              fit into real schedules and real lives.
+            </p>
+
+            <div class="hero-cta-row">
+              <a href="#whiteice" class="btn btn-primary">Shop WhiteICE</a>
+              <a href="#dentists" class="btn btn-ghost">Programs for Dentists</a>
+            </div>
+
+            <div class="hero-note">
+              Trusted by professionals · Built for patients who expect results
+            </div>
+          </div>
+
+          <div class="hero-right">
+            <div class="hero-card">
+              <div class="hero-card-label">Core products</div>
+              <div class="hero-card-main">
+                WhiteICE™ carnauba wax toothpaste
+              </div>
+              <div class="hero-card-sub">
+                The world’s first carnauba-based wax toothpaste, formulated to
+                help shield enamel from coffee, tea, and wine.
+              </div>
+            </div>
+
+            <div class="hero-card">
+              <div class="hero-card-label">In-Spa / In-Office</div>
+              <div class="hero-card-main">
+                Daylight 5K &amp; professional whitening systems
+              </div>
+              <div class="hero-card-sub">
+                Chairside whitening built for high-impact shade change and
+                predictable results – with marketing support from WSWWINC.
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- WHITEICE -->
+      <section class="section" id="whiteice">
+        <div class="section-inner two-column">
+          <div>
+            <div class="section-label">WhiteICE™</div>
+            <h2 class="section-title">Carnauba Wax Toothpaste</h2>
+            <p class="section-body">
+              WhiteICE is our signature carnauba wax toothpaste, developed to
+              help shield the micro-pores of enamel from everyday staining.
+              Coffee, tea, red wine – your patients live in the real world.
+              WhiteICE is designed for it.
+            </p>
+
+            <div class="pill-list">
+              <span class="pill">Carnauba-based wax formula</span>
+              <span class="pill">Daily stain protection</span>
+              <span class="pill">Professional-grade feel</span>
+            </div>
+
+            <p class="section-body">
+              Sold through dentists, spas, and select retail partners. Ask
+              WSWWINC how to bundle WhiteICE with your in-office whitening to
+              keep results locked in between visits.
+            </p>
+
+            <a href="#contact" class="btn btn-primary">Order for your office</a>
+          </div>
+
+          <div class="card-image">
+            <!-- Replace with your real toothpaste / WhiteICE image -->
+            <img src="whiteice-bottles.jpg" alt="WhiteICE carnauba wax toothpaste" />
+          </div>
+        </div>
+      </section>
+
+      <!-- IN-SPA WHITENING -->
+      <section class="section" id="in-spa">
+        <div class="section-inner two-column">
+          <div class="card-image">
+            <!-- Using your uploaded image file -->
+            <img src="IMG_1045.jpeg" alt="Daylight 5K in-spa whitening system" />
+          </div>
+
+          <div>
+            <div class="section-label">In-Spa / In-Office</div>
+            <h2 class="section-title">Daylight 5K Whitening</h2>
+            <p class="section-body">
+              DayLight 5K is a dual-mode whitening and shade-matching illumination system.
+              Color-corrected LEDs deliver 5000°K white light for consistent shade checks,
+              and a 430–470 nm “cool blue” spectrum for activating SpaWhite peroxide foam –
+              with no UV output and no fan-driven heat.
+            </p>
+
+            <div class="pill-list">
+              <span class="pill">Dual-mode LED light</span>
+              <span class="pill">5000°K white + cool blue</span>
+              <span class="pill">Thermally stable, no fans</span>
+            </div>
+
+            <p class="section-body">
+              The thermally stable light head runs only about 12°F above body temperature,
+              and a light-guiding mouthpiece with built-in optics spreads blue light
+              across all tooth surfaces while allowing patients to comfortably close
+              their mouth during treatment.
+            </p>
+
+            <a href="#contact" class="btn btn-ghost">Request wholesale info</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- HOW IT WORKS -->
+      <section class="section" id="how-it-works">
+        <div class="section-inner">
+          <div class="section-label">How It Works</div>
+          <h2 class="section-title">SpaWhite + DayLight 5K System</h2>
+
+          <p class="section-body">
+            The SpaWhite smile rejuvenation system combines a patented foam pad,
+            carbamide peroxide gel, and the DayLight 5K LED light to create a fast,
+            controlled whitening treatment. Each element plays a specific role:
+          </p>
+
+          <p class="section-body">
+            <strong>Carbamide Peroxide&nbsp;|</strong>
+            When pH-neutral carbamide peroxide mixes with moisture in the mouth, it
+            releases hydroxyl radicals that gently penetrate the tooth structure and
+            loosen stains that have built up over time.
+          </p>
+
+          <p class="section-body">
+            <strong>Light&nbsp;|</strong>
+            Exposing teeth and the suspended peroxide to the LED lights of the
+            DayLight 5K accelerates the conversion of hydrogen peroxide into whitening
+            hydroxyl radicals. The flexible mouth tray acts as a lens to focus and
+            guide the light.
+          </p>
+
+          <p class="section-body">
+            <strong>Pressure&nbsp;|</strong>
+            Mild, even pressure is required to drive hydroxyl radicals into the
+            enamel. Once the strip is seated in the flexible mouth tray, the tray
+            conforms to the shape of the teeth to keep gel and tooth surfaces in
+            close contact.
+          </p>
+
+          <p class="section-body">
+            <strong>Heat&nbsp;|</strong>
+            Gentle heat from the DayLight 5K light system further assists in
+            releasing hydroxyl radicals. The light head is thermally stable and
+            designed so the warmth is barely noticeable while still supporting
+            an efficient reaction.
+          </p>
+
+          <p class="section-body">
+            <strong>Exposure&nbsp;|</strong>
+            Length of exposure is key to effective whitening. The SpaWhite /
+            DayLight 5K system is engineered so a single, well-controlled session
+            can noticeably brighten a smile in as little as 30 minutes.
+          </p>
+        </div>
+      </section>
+
+      <!-- DENTISTS -->
+      <section class="section" id="dentists">
+        <div class="section-inner">
+          <div class="section-label">For Dentists &amp; Professionals</div>
+          <h2 class="section-title">The Dentist’s Best Friend</h2>
+          <p class="section-body">
+            WSWWINC understands how hard it is to balance chair time, patient
+            expectations, and real-world budgets. Our systems are built to fit
+            into existing workflows – not fight them. Simple training,
+            marketing assets you can actually use, and retail products patients
+            remember by name.
+          </p>
+
+          <div class="feature-grid">
+            <div class="feature-card">
+              <strong>Simple to Offer</strong>
+              Streamlined protocols that slip into your hygiene visits or
+              dedicated whitening appointments – with minimal disruption.
+            </div>
+            <div class="feature-card">
+              <strong>Easy to Explain</strong>
+              Clear talking points and leave-behind materials so patients
+              understand the “why” behind your whitening recommendation.
+            </div>
+            <div class="feature-card">
+              <strong>Built to Retain</strong>
+              WhiteICE and take-home care keep results visible, giving
+              patients a reason to come back to your office – not someone
+              else’s.
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ABOUT / WSWWINC -->
+      <section class="section" id="about">
+        <div class="section-inner">
+          <div class="section-label">About</div>
+          <h2 class="section-title">WhiteScience Worldwide (WSWWINC)</h2>
+
+          <p class="section-body">
+            WhiteScience Worldwide (WSWWINC) is a global cosmetic teeth whitening company
+            built around one thing: premium results that are easy to deliver and easy to sell.
+          </p>
+
+          <ul class="about-list">
+            <li>
+              Under the WhiteScience brand, WSWWINC develops and supports a full line of
+              professional whitening solutions, including DayLight 5K™ professional whitening
+              light, SpaWhite® and SolarWhite® in-spa / in-office systems, WhiteICE™ carnauba
+              wax toothpaste, and WhiteScience® Whitening Toothpaste and retail maintenance products.
+            </li>
+            <li>
+              Our focus goes beyond chemistry and hardware. WSWWINC backs every product with
+              real marketing and distribution support – training, printed materials, displays,
+              and visual assets you can actually use to grow your whitening business.
+            </li>
+          </ul>
+
+          <p class="section-body">
+            From the treatment room to the retail shelf, WhiteScience innovation, patented
+            technologies, and recognizable packaging are designed to help you attract new
+            clients, increase profit per visit, and keep your whitening program moving even in
+            a challenging economy.
+          </p>
+        </div>
+      </section>
+
+      <!-- CONTACT -->
+      <section class="section" id="contact">
+        <div class="section-inner contact-grid">
+          <div>
+            <div class="section-label">Connect</div>
+            <h2 class="section-title">Partner with WSWWINC</h2>
+            <p class="section-body">
+              Ready to bring WhiteScience Worldwide into your office, spa, or
+              practice? Reach out for wholesale pricing, starter kits, and
+              marketing support designed to help you launch quickly.
+            </p>
+            <p class="section-body">
+              Send us a quick email with your practice name, location, and
+              what you’re currently doing for whitening. We’ll follow up with
+              options that fit.
+            </p>
+          </div>
+
+          <div class="contact-card">
+            <div class="contact-item">
+              <div class="contact-label">Email</div>
+              <div class="contact-value">
+                <a href="mailto:WSWWINC@yahoo.com">WSWWINC@yahoo.com</a>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-label">Phone</div>
+              <div class="contact-value">
+                <a href="tel:12542174923">(254) 217-4923</a>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-label">Based in</div>
+              <div class="contact-value">
+                United States · WhiteScience Worldwide (WSWWINC)
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-label">Owner</div>
+              <div class="contact-value">Dillon Frost</div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+      <div class="footer-inner">
+        <span>© 2013–2025 WhiteScience Worldwide (WSWWINC). All rights reserved.</span>
+        <span>Built in partnership with Dillon Frost.</span>
+      </div>
+    </footer>
   </div>
-</section>
+</body>
+</html>
