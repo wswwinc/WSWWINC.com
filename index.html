@@ -239,6 +239,25 @@
       color: var(--text-muted);
     }
 
+    /* Make hero meta links look like pills */
+    .hero-meta a {
+      display: inline-block;
+      border-radius: 999px;
+      padding: 4px 10px;
+      background: var(--bg-card);
+      border: 1px solid rgba(148, 163, 184, 0.35);
+      margin-right: 6px;
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      color: var(--text-muted);
+    }
+
+    .hero-meta a:hover {
+      border-color: var(--accent);
+      color: var(--text-main);
+    }
+
     .hero-meta span {
       border-radius: 999px;
       padding: 4px 10px;
@@ -420,6 +439,11 @@
       gap: 12px;
     }
 
+    /* helper for top-of-section images */
+    .section-image-top {
+      margin-bottom: 32px;
+    }
+
     /* CONTACT */
 
     .contact-card {
@@ -511,7 +535,7 @@
     </header>
 
     <main>
-        <!-- Hero -->
+      <!-- Hero -->
       <section class="hero" id="top">
         <div>
           <div class="hero-kicker">Premium Dental-Tech Whitening</div>
@@ -519,10 +543,10 @@
             A <span>whiter smile</span> in the time it takes to drink your coffee.
           </h1>
           <p class="hero-sub">
-  WhiteScience brings you professional-grade whitening with powerful in-office systems,
-  convenient take-home kits, and our signature WhiteICE&nbsp;carnauba wax toothpaste.
-</p>
-        
+            WhiteScience brings you professional-grade whitening with powerful in-office systems,
+            convenient take-home kits, and our signature WhiteICE&nbsp;carnauba wax toothpaste.
+          </p>
+
           <div class="hero-actions">
             <a href="#toothpaste" class="btn-primary">Shop WhiteICE</a>
             <a href="#wholesale" class="btn-ghost">Wholesale &amp; Offices</a>
@@ -534,7 +558,6 @@
           </div>
         </div>
       </section>
-      
 
       <!-- WhiteICE Toothpaste -->
       <section id="toothpaste">
@@ -618,64 +641,63 @@
       </section>
 
       <!-- Daylight 5K Light -->
-<section id="daylight5k">
-  <div class="section-label">In-Office Technology</div>
-  <h2 class="section-title">DayLight 5K² Whitening Light.</h2>
-  <p class="section-intro">
-    DayLight 5K² is a dual-mode whitening and shade-matching illumination
-    system. Color-corrected LEDs deliver 5000°K white light for consistent,
-    accurate shade checks, and a 430–470&nbsp;nm "cool blue" spectrum for
-    activating SpaWhite peroxide foam – with no UV output and no fan-driven heat.
-  </p>
+      <section id="daylight5k">
+        <div class="section-label">In-Office Technology</div>
+        <h2 class="section-title">DayLight 5K² Whitening Light.</h2>
+        <p class="section-intro">
+          DayLight 5K² is a dual-mode whitening and shade-matching illumination
+          system. Color-corrected LEDs deliver 5000°K white light for consistent,
+          accurate shade checks, and a 430–470&nbsp;nm "cool blue" spectrum for
+          activating SpaWhite peroxide foam – with no UV output and no fan-driven heat.
+        </p>
 
-  <div style="margin-bottom: 32px;">
-    <img
-      src="IMG_1418.jpeg"
-      alt="DayLight 5K² whitening light banner"
-      class="product-image daylight"
-    >
-  </div>
+        <div class="section-image-top">
+          <img
+            src="IMG_1418.jpeg"
+            alt="DayLight 5K² whitening light banner"
+            class="product-image daylight"
+          >
+        </div>
 
-  <div class="panel">
-    <div class="panel-body">
-      <p>
-        The thermally stable light head runs only about 12°F above body
-        temperature, so it stays comfortable for your patients while still
-        supporting an efficient whitening reaction.
-      </p>
-      <p>
-        A built-in light-guiding mouthpiece spreads blue light evenly across
-        all tooth surfaces, and the design allows patients to comfortably
-        close their mouth during treatment – no bulky cheek retractors
-        for the entire session.
-      </p>
-      <ul class="key-list">
-        <li>• Dual-mode LED: 5000°K white + 430–470&nbsp;nm blue</li>
-        <li>• Thermally stable – no fan noise or hot spots</li>
-        <li>• Mouthpiece optics for full-arch coverage</li>
-        <li>• Lifetime warranty included</li>
-      </ul>
-      <div class="chip-row">
-        <div class="chip">Dual-mode LED</div>
-        <div class="chip">Shade matching + whitening</div>
-        <div class="chip">Thermally stable</div>
-        <div class="chip">Lifetime warranty</div>
-      </div>
-      <a class="btn-buy"
-         href="mailto:WSWWINC@yahoo.com?subject=Order%20-%20DayLight%205K2%20System">
-        Request Pricing <span class="price">$2,495</span>
-      </a>
-    </div>
-  </div>
-</section>
-
+        <div class="panel">
+          <div class="panel-body">
+            <p>
+              The thermally stable light head runs only about 12°F above body
+              temperature, so it stays comfortable for your patients while still
+              supporting an efficient whitening reaction.
+            </p>
+            <p>
+              A built-in light-guiding mouthpiece spreads blue light evenly across
+              all tooth surfaces, and the design allows patients to comfortably
+              close their mouth during treatment – no bulky cheek retractors
+              for the entire session.
+            </p>
+            <ul class="key-list">
+              <li>• Dual-mode LED: 5000°K white + 430–470&nbsp;nm blue</li>
+              <li>• Thermally stable – no fan noise or hot spots</li>
+              <li>• Mouthpiece optics for full-arch coverage</li>
+              <li>• Lifetime warranty included</li>
+            </ul>
+            <div class="chip-row">
+              <div class="chip">Dual-mode LED</div>
+              <div class="chip">Shade matching + whitening</div>
+              <div class="chip">Thermally stable</div>
+              <div class="chip">Lifetime warranty</div>
+            </div>
+            <a class="btn-buy"
+               href="mailto:WSWWINC@yahoo.com?subject=Order%20-%20DayLight%205K2%20System">
+              Request Pricing <span class="price">$2,495</span>
+            </a>
+          </div>
+        </div>
+      </section>
 
       <!-- For Dentists -->
       <section id="dentists">
         <div class="section-label">For Dentists</div>
         <h2 class="section-title">WSWW INC. is the dentist’s best friend.</h2>
         <p class="section-intro">
-          WSWW INC.,Specializes in the retail
+          WSWW INC. specializes in the retail
           and consumer teeth-whitening market, with programs designed specifically
           to help practices grow and retain their patient base.
         </p>
