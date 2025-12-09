@@ -178,6 +178,7 @@
       cursor: pointer;
       transition: all 0.18s ease;
       white-space: nowrap;
+      background: transparent;
     }
 
     .btn-primary {
@@ -258,6 +259,14 @@
     .hero-meta a:hover {
       border-color: var(--accent);
       color: var(--text-main);
+    }
+
+    .hero-meta span {
+      border-radius: 999px;
+      padding: 4px 10px;
+      background: var(--bg-card);
+      border: 1px solid rgba(148, 163, 184, 0.35);
+      margin-right: 6px;
     }
 
     /* GENERIC SECTIONS */
@@ -359,7 +368,7 @@
     }
 
     .product-image.giftbox {
-      max-width: 260px;
+      max-width: 300px;
       margin-left: auto;
       margin-right: auto;
     }
@@ -471,15 +480,15 @@
     </header>
 
     <main>
-      <!-- HERO -->
+      <!-- HERO with image toggle -->
       <section class="hero" id="top">
         <div>
           <div class="hero-kicker" id="hero-kicker">The Original Maintenance Stick</div>
-
+          
           <h1 class="hero-title">
             A <span>whiter smile</span> in the time it takes to drink your coffee.
           </h1>
-
+          
           <img
             id="hero-image"
             src="070F4115-5AFF-4E62-BC0B-14C9C653A460.png"
@@ -495,8 +504,8 @@
           </p>
 
           <div class="hero-actions">
-            <button id="hero-toggle" class="btn-primary" aria-pressed="false">
-              Show Toothpaste
+            <button id="hero-toggle" class="btn-primary" type="button" aria-pressed="false">
+              View Maintenance Stick Details
             </button>
             <a href="#wholesale" class="btn-ghost">Wholesale &amp; Offices</a>
           </div>
@@ -508,7 +517,6 @@
         </div>
       </section>
 
-      <!-- WhiteICE Toothpaste -->
       <section id="toothpaste">
         <div class="section-label">WhiteICE Toothpaste</div>
         <h2 class="section-title">The world’s first carnauba wax toothpaste.</h2>
@@ -551,7 +559,6 @@
         </div>
       </section>
 
-      <!-- Gift Box -->
       <section id="giftbox">
         <div class="section-label">Gift Box</div>
         <h2 class="section-title">The Gift of a Smile.</h2>
@@ -563,8 +570,9 @@
 
         <div class="panel panel-split">
           <div>
+            <!-- UPDATED IMAGE -->
             <img
-              src="IMG_1168.jpeg"
+              src="IMG_1982.jpeg"
               alt="WhiteScience gift box set"
               class="product-image giftbox"
             >
@@ -589,7 +597,6 @@
         </div>
       </section>
 
-      <!-- Daylight 5K Light -->
       <section id="daylight5k">
         <div class="section-label">In-Office Technology</div>
         <h2 class="section-title">DayLight 5K² Whitening Light.</h2>
@@ -641,7 +648,6 @@
         </div>
       </section>
 
-      <!-- For Dentists -->
       <section id="dentists">
         <div class="section-label">For Dentists</div>
         <h2 class="section-title">WSWW INC. is the dentist’s best friend.</h2>
@@ -691,7 +697,6 @@
         </div>
       </section>
 
-      <!-- Wholesale & Training -->
       <section id="wholesale">
         <div class="section-label">Wholesale · Training · Marketing</div>
         <h2 class="section-title">Wholesale pricing &amp; whitening programs.</h2>
@@ -736,7 +741,6 @@
         </div>
       </section>
 
-      <!-- Contact -->
       <section id="contact">
         <div class="section-label">Contact</div>
         <div class="contact-card">
@@ -771,46 +775,29 @@
       const heroImg = document.getElementById("hero-image");
       const heroKicker = document.getElementById("hero-kicker");
 
-      // Your two hero images
-      const imgStick = "070F4115-5AFF-4E62-BC0B-14C9C653A460.png";
-      const imgPaste = "IMG_1946.jpeg";
+      // Main hero image (first thing people see)
+      const imgPrimary = "070F4115-5AFF-4E62-BC0B-14C9C653A460.png";
 
-      // Matching text for each state
-      const altStick = "WhiteICE Original Maintenance Stick";
-      const altPaste = "WhiteICE Carnauba Wax Toothpaste";
+      // Second image shown on button click
+      const imgSecondary = "IMG_1946.jpeg";
 
-      const kickerStick = "The Original Maintenance Stick";
-      const kickerPaste = "New WhiteICE Toothpaste";
-
-      function showStick() {
-        heroImg.src = imgStick;
-        heroImg.alt = altStick;
-        if (heroKicker) heroKicker.textContent = kickerStick;
-
-        toggleBtn.textContent = "Show Toothpaste";
-        toggleBtn.setAttribute("aria-pressed", "false");
-      }
-
-      function showPaste() {
-        heroImg.src = imgPaste;
-        heroImg.alt = altPaste;
-        if (heroKicker) heroKicker.textContent = kickerPaste;
-
-        toggleBtn.textContent = "Show Maintenance Stick";
-        toggleBtn.setAttribute("aria-pressed", "true");
-      }
-
-      // Ensure your starting state is consistent
-      showStick();
+      let showingSecondary = false;
 
       toggleBtn.addEventListener("click", () => {
-        const currentSrc = heroImg.getAttribute("src");
-        const isStick = currentSrc === imgStick;
+        showingSecondary = !showingSecondary;
 
-        if (isStick) {
-          showPaste();
+        if (showingSecondary) {
+          heroImg.setAttribute("src", imgSecondary);
+          heroImg.setAttribute("alt", "WhiteICE maintenance stick information");
+          heroKicker.textContent = "WhiteICE Maintenance Stick";
+          toggleBtn.textContent = "Back to Hero Photo";
+          toggleBtn.setAttribute("aria-pressed", "true");
         } else {
-          showStick();
+          heroImg.setAttribute("src", imgPrimary);
+          heroImg.setAttribute("alt", "WhiteICE Original Maintenance Stick");
+          heroKicker.textContent = "The Original Maintenance Stick";
+          toggleBtn.textContent = "View Maintenance Stick Details";
+          toggleBtn.setAttribute("aria-pressed", "false");
         }
       });
     });
