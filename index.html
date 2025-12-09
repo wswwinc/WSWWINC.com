@@ -495,7 +495,7 @@
           </p>
 
           <div class="hero-actions">
-            <a href="#maintenance" class="btn-primary">Shop Stick</a>
+            <a href="#maintenance" class="btn-primary">Shop WhiteICE</a>
             <a href="#toothpaste" class="btn-primary">Shop Toothpaste</a>
             <button id="hero-toggle" class="btn-ghost" type="button" aria-pressed="false">
               Show Toothpaste
@@ -683,11 +683,11 @@
         <div class="section-label">For Dentists</div>
         <h2 class="section-title">WSWW INC. is the dentist’s best friend.</h2>
 
-        <!-- Moved image directly under the heading -->
+        <!-- Moved this image up directly under the header -->
         <div class="section-image-top">
           <img
-            src="74553822-1A59-4A77-A27B-7B1EF28B2B76.jpeg"
-            alt="WhiteScience dentist program highlight"
+            src="IMG_1046.jpeg"
+            alt="Artiste by WhiteScience professional whitening tray"
             class="product-image dentist"
           >
         </div>
@@ -724,11 +724,6 @@
           </div>
 
           <div class="dentist-stack">
-            <img
-              src="IMG_1046.jpeg"
-              alt="Artiste by WhiteScience professional whitening tray"
-              class="product-image dentist"
-            >
             <img
               src="IMG_1170.jpeg"
               alt="WhiteScience dentist testimonials and endorsements"
@@ -805,32 +800,29 @@
     </main>
 
     <footer>
-      © 2013–<span id="footer-year"></span> WhiteScience · WSWW INC. All rights reserved.
+      © 2013 WhiteScience · WSWW INC. All rights reserved.
     </footer>
   </div>
 
   <script>
     document.addEventListener("DOMContentLoaded", () => {
-      // Footer year
-      const yearEl = document.getElementById("footer-year");
-      if (yearEl) yearEl.textContent = new Date().getFullYear();
-
-      // Hero toggle
       const toggleBtn = document.getElementById("hero-toggle");
       const heroImg = document.getElementById("hero-image");
       const heroKicker = document.getElementById("hero-kicker");
 
+      // Stick Image (Default)
       const imgStick = "070F4115-5AFF-4E62-BC0B-14C9C653A460.png";
       const altStick = "WhiteICE Original Maintenance Stick";
       const kickerStick = "The Original Maintenance Stick";
       const btnTextStick = "Show Toothpaste";
 
+      // Toothpaste Image (Toggled)
       const imgPaste = "IMG_1946.jpeg";
       const altPaste = "New WhiteICE Toothpaste";
       const kickerPaste = "New WhiteICE Toothpaste";
       const btnTextPaste = "Show Maintenance Stick";
 
-      // Initial state
+      // Ensure correct initial state on page load
       heroImg.src = imgStick;
       heroImg.alt = altStick;
       if (heroKicker) heroKicker.textContent = kickerStick;
