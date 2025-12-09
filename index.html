@@ -34,7 +34,6 @@
       scroll-behavior: smooth;
     }
 
-    /* Ensure buttons inherit font styles */
     button { font-family: inherit; }
 
     img {
@@ -136,6 +135,7 @@
       letter-spacing: 0.22em;
       color: var(--accent);
       margin-bottom: 10px;
+      font-weight: 700;
     }
 
     .hero-title {
@@ -178,7 +178,6 @@
       cursor: pointer;
       transition: all 0.18s ease;
       white-space: nowrap;
-      background: transparent;
     }
 
     .btn-primary {
@@ -259,14 +258,6 @@
     .hero-meta a:hover {
       border-color: var(--accent);
       color: var(--text-main);
-    }
-
-    .hero-meta span {
-      border-radius: 999px;
-      padding: 4px 10px;
-      background: var(--bg-card);
-      border: 1px solid rgba(148, 163, 184, 0.35);
-      margin-right: 6px;
     }
 
     /* GENERIC SECTIONS */
@@ -442,14 +433,14 @@
         flex-wrap: wrap;
         justify-content: center;
         text-align: center;
-        position: static;
+        /* sticky stays enabled on mobile */
       }
 
       .nav-links {
         justify-content: center;
         flex-wrap: wrap;
       }
-      
+
       .panel-split { grid-template-columns: 1fr; }
 
       .page { padding-inline: 14px; }
@@ -470,7 +461,8 @@
         </div>
       </div>
       <nav class="nav-links">
-        <a href="#toothpaste">Toothpaste</a>
+        <a href="#maintenance">Maintenance Stick</a>
+        <a href="#toothpaste">WhiteICE Toothpaste</a>
         <a href="#daylight5k">Daylight 5K</a>
         <a href="#giftbox">Gift Box</a>
         <a href="#dentists">For Dentists</a>
@@ -480,15 +472,14 @@
     </header>
 
     <main>
-      <!-- HERO with image toggle -->
       <section class="hero" id="top">
         <div>
           <div class="hero-kicker" id="hero-kicker">The Original Maintenance Stick</div>
-          
+
           <h1 class="hero-title">
             A <span>whiter smile</span> in the time it takes to drink your coffee.
           </h1>
-          
+
           <img
             id="hero-image"
             src="070F4115-5AFF-4E62-BC0B-14C9C653A460.png"
@@ -504,15 +495,56 @@
           </p>
 
           <div class="hero-actions">
-            <button id="hero-toggle" class="btn-primary" type="button" aria-pressed="false">
-              View Maintenance Stick Details
+            <a href="#maintenance" class="btn-primary">Shop Stick</a>
+            <a href="#toothpaste" class="btn-primary">Shop Toothpaste</a>
+            <button id="hero-toggle" class="btn-ghost" type="button" aria-pressed="false">
+              Show Toothpaste
             </button>
-            <a href="#wholesale" class="btn-ghost">Wholesale &amp; Offices</a>
           </div>
 
           <div class="hero-meta">
             <a href="#dentists" class="hero-pill">Designed for dentists</a>
             <a href="#toothpaste" class="hero-pill">Trusted by patients</a>
+          </div>
+        </div>
+      </section>
+
+      <section id="maintenance">
+        <div class="section-label">Best Seller</div>
+        <h2 class="section-title">The Original Maintenance Stick.</h2>
+        <p class="section-intro">
+          The product that started it all. Our signature WhiteICE Stick is the ultimate
+          on-the-go maintenance tool to keep your smile bright anywhere, anytime.
+        </p>
+
+        <div class="panel panel-split">
+          <div class="panel-body">
+            <p>
+              Instantly erase daily stains from coffee, tea, and red wine with a single swipe.
+              Designed for convenience, the Maintenance Stick fits in your pocket or purse
+              and leaves no sensitivity—just a clean, polished feel and a brighter smile.
+            </p>
+            <ul class="key-list">
+              <li>• Instant on-the-go whitening maintenance</li>
+              <li>• Precision brush tip for targeted application</li>
+              <li>• Best-selling product for daily touch-ups</li>
+            </ul>
+            <div class="chip-row">
+              <div class="chip">Best Seller</div>
+              <div class="chip">Portable</div>
+              <div class="chip">Instant Results</div>
+            </div>
+            <a class="btn-buy"
+               href="mailto:WSWWINC@yahoo.com?subject=Order%20-%20WhiteICE%20Maintenance%20Stick">
+              Buy Now <span class="price">$59.99</span>
+            </a>
+          </div>
+          <div>
+            <img
+              src="070F4115-5AFF-4E62-BC0B-14C9C653A460.png"
+              alt="WhiteICE Original Maintenance Stick"
+              class="product-image whiteice"
+            >
           </div>
         </div>
       </section>
@@ -570,7 +602,6 @@
 
         <div class="panel panel-split">
           <div>
-            <!-- UPDATED IMAGE -->
             <img
               src="IMG_1982.jpeg"
               alt="WhiteScience gift box set"
@@ -651,6 +682,16 @@
       <section id="dentists">
         <div class="section-label">For Dentists</div>
         <h2 class="section-title">WSWW INC. is the dentist’s best friend.</h2>
+
+        <!-- Moved image directly under the heading -->
+        <div class="section-image-top">
+          <img
+            src="74553822-1A59-4A77-A27B-7B1EF28B2B76.jpeg"
+            alt="WhiteScience dentist program highlight"
+            class="product-image dentist"
+          >
+        </div>
+
         <p class="section-intro">
           WSWW INC. specializes in the retail
           and consumer teeth-whitening market, with programs designed specifically
@@ -764,39 +805,53 @@
     </main>
 
     <footer>
-      © 2013 WhiteScience · WSWW INC. All rights reserved.
+      © 2013–<span id="footer-year"></span> WhiteScience · WSWW INC. All rights reserved.
     </footer>
   </div>
 
-  <!-- HERO IMAGE TOGGLE SCRIPT -->
   <script>
     document.addEventListener("DOMContentLoaded", () => {
+      // Footer year
+      const yearEl = document.getElementById("footer-year");
+      if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+      // Hero toggle
       const toggleBtn = document.getElementById("hero-toggle");
       const heroImg = document.getElementById("hero-image");
       const heroKicker = document.getElementById("hero-kicker");
 
-      // Main hero image (first thing people see)
-      const imgPrimary = "070F4115-5AFF-4E62-BC0B-14C9C653A460.png";
+      const imgStick = "070F4115-5AFF-4E62-BC0B-14C9C653A460.png";
+      const altStick = "WhiteICE Original Maintenance Stick";
+      const kickerStick = "The Original Maintenance Stick";
+      const btnTextStick = "Show Toothpaste";
 
-      // Second image shown on button click
-      const imgSecondary = "IMG_1946.jpeg";
+      const imgPaste = "IMG_1946.jpeg";
+      const altPaste = "New WhiteICE Toothpaste";
+      const kickerPaste = "New WhiteICE Toothpaste";
+      const btnTextPaste = "Show Maintenance Stick";
 
-      let showingSecondary = false;
+      // Initial state
+      heroImg.src = imgStick;
+      heroImg.alt = altStick;
+      if (heroKicker) heroKicker.textContent = kickerStick;
+      toggleBtn.textContent = btnTextStick;
+      toggleBtn.setAttribute("aria-pressed", "false");
 
       toggleBtn.addEventListener("click", () => {
-        showingSecondary = !showingSecondary;
+        const currentSrc = heroImg.getAttribute("src") || "";
+        const isStick = currentSrc.includes(imgStick);
 
-        if (showingSecondary) {
-          heroImg.setAttribute("src", imgSecondary);
-          heroImg.setAttribute("alt", "WhiteICE maintenance stick information");
-          heroKicker.textContent = "WhiteICE Maintenance Stick";
-          toggleBtn.textContent = "Back to Hero Photo";
+        if (isStick) {
+          heroImg.src = imgPaste;
+          heroImg.alt = altPaste;
+          if (heroKicker) heroKicker.textContent = kickerPaste;
+          toggleBtn.textContent = btnTextPaste;
           toggleBtn.setAttribute("aria-pressed", "true");
         } else {
-          heroImg.setAttribute("src", imgPrimary);
-          heroImg.setAttribute("alt", "WhiteICE Original Maintenance Stick");
-          heroKicker.textContent = "The Original Maintenance Stick";
-          toggleBtn.textContent = "View Maintenance Stick Details";
+          heroImg.src = imgStick;
+          heroImg.alt = altStick;
+          if (heroKicker) heroKicker.textContent = kickerStick;
+          toggleBtn.textContent = btnTextStick;
           toggleBtn.setAttribute("aria-pressed", "false");
         }
       });
