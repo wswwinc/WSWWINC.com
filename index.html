@@ -121,8 +121,8 @@
 
     .hero {
       display: grid;
-      grid-template-columns: minmax(0, 1.25fr) minmax(0, 1.1fr);
-      gap: 40px;
+      grid-template-columns: 1fr;
+      gap: 24px;
       align-items: center;
       padding: 40px 4px 56px;
     }
@@ -264,55 +264,6 @@
       background: var(--bg-card);
       border: 1px solid rgba(148, 163, 184, 0.35);
       margin-right: 6px;
-    }
-
-    .hero-card {
-      background: radial-gradient(circle at top, #e0f4ff 0, #ffffff 52%);
-      border-radius: 26px;
-      padding: 26px 26px 24px;
-      box-shadow: var(--shadow-soft);
-      border: 1px solid rgba(226, 232, 240, 0.9);
-    }
-
-    .hero-card-title {
-      font-size: 13px;
-      text-transform: uppercase;
-      letter-spacing: 0.18em;
-      margin-bottom: 16px;
-      color: #0f172a;
-    }
-
-    .hero-card-highlight {
-      font-size: 28px;
-      margin: 0 0 4px;
-    }
-
-    .hero-card-sub {
-      font-size: 13px;
-      color: var(--text-muted);
-      margin-bottom: 18px;
-    }
-
-    .hero-card-list {
-      list-style: none;
-      padding: 0;
-      margin: 0 0 8px;
-      font-size: 13px;
-      color: #111827;
-    }
-
-    .hero-card-list li {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      margin-bottom: 6px;
-    }
-
-    .pill-dot {
-      width: 8px;
-      height: 8px;
-      border-radius: 999px;
-      background: var(--accent);
     }
 
     /* GENERIC SECTIONS */
@@ -497,14 +448,7 @@
         justify-content: center;
         flex-wrap: wrap;
       }
-
-      .hero {
-        grid-template-columns: 1fr;
-        padding-top: 28px;
-      }
-
-      .hero-card { order: -1; }
-
+      
       .panel-split { grid-template-columns: 1fr; }
 
       .page { padding-inline: 14px; }
@@ -535,40 +479,38 @@
     </header>
 
     <main>
-      <!-- Hero -->
       <section class="hero" id="top">
-  <div>
-    <div class="hero-kicker">Premium Dental-Tech Whitening</div>
-    <h1 class="hero-title">
-      A <span>whiter smile</span> in the time it takes to drink your coffee.
-    </h1>
-    <p class="hero-sub">
-  WhiteScience brings you professional-grade whitening with powerful in-office teeth whitening systems,
-  convenient take-home kits, our original WhiteICE maintenance stick, and now our new signature
-  WhiteICE&nbsp;carnauba wax toothpaste.
-</p>
+        <div>
+          <div class="hero-kicker">Premium Dental-Tech Whitening</div>
+          <h1 class="hero-title">
+            A <span>whiter smile</span> in the time it takes to drink your coffee.
+          </h1>
+          
+          <img
+            src="IMG_1967.jpeg"
+            alt="WhiteICE the coolest way to white teeth"
+            class="product-image whiteice"
+            style="margin-bottom: 24px;"
+          >
 
-    <div class="hero-actions">
-      <a href="#toothpaste" class="btn-primary">Shop WhiteICE</a>
-      <a href="#wholesale" class="btn-ghost">Wholesale &amp; Offices</a>
-    </div>
+          <p class="hero-sub">
+            WhiteScience brings you professional-grade whitening with powerful in-office teeth whitening systems,
+            convenient take-home kits, our original WhiteICE maintenance stick, and now our new signature
+            WhiteICE&nbsp;carnauba wax toothpaste.
+          </p>
 
-    <div class="hero-meta">
-      <a href="#dentists" class="hero-pill">Designed for dentists</a>
-      <a href="#toothpaste" class="hero-pill">Trusted by patients</a>
-    </div>
-  </div>
+          <div class="hero-actions">
+            <a href="#toothpaste" class="btn-primary">Shop WhiteICE</a>
+            <a href="#wholesale" class="btn-ghost">Wholesale &amp; Offices</a>
+          </div>
 
-  <div>
-    <img
-      src="IMG_1967.jpeg"
-      alt="WhiteICE the coolest way to white teeth"
-      class="product-image whiteice"
-    >
-  </div>
-</section>
+          <div class="hero-meta">
+            <a href="#dentists" class="hero-pill">Designed for dentists</a>
+            <a href="#toothpaste" class="hero-pill">Trusted by patients</a>
+          </div>
+        </div>
+      </section>
 
-      <!-- WhiteICE Toothpaste -->
       <section id="toothpaste">
         <div class="section-label">WhiteICE Toothpaste</div>
         <h2 class="section-title">The world’s first carnauba wax toothpaste.</h2>
@@ -611,7 +553,6 @@
         </div>
       </section>
 
-      <!-- Gift Box -->
       <section id="giftbox">
         <div class="section-label">Gift Box</div>
         <h2 class="section-title">The Gift of a Smile.</h2>
@@ -649,7 +590,6 @@
         </div>
       </section>
 
-      <!-- Daylight 5K Light -->
       <section id="daylight5k">
         <div class="section-label">In-Office Technology</div>
         <h2 class="section-title">DayLight 5K² Whitening Light.</h2>
@@ -701,7 +641,6 @@
         </div>
       </section>
 
-      <!-- For Dentists -->
       <section id="dentists">
         <div class="section-label">For Dentists</div>
         <h2 class="section-title">WSWW INC. is the dentist’s best friend.</h2>
@@ -751,7 +690,6 @@
         </div>
       </section>
 
-      <!-- Wholesale & Training -->
       <section id="wholesale">
         <div class="section-label">Wholesale · Training · Marketing</div>
         <h2 class="section-title">Wholesale pricing &amp; whitening programs.</h2>
@@ -796,7 +734,6 @@
         </div>
       </section>
 
-      <!-- Contact -->
       <section id="contact">
         <div class="section-label">Contact</div>
         <div class="contact-card">
