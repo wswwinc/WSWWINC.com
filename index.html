@@ -34,6 +34,9 @@
       scroll-behavior: smooth;
     }
 
+    /* Ensure buttons inherit font styles */
+    button { font-family: inherit; }
+
     img {
       max-width: 100%;
       height: auto;
@@ -239,7 +242,6 @@
       color: var(--text-muted);
     }
 
-    /* Make hero meta links look like pills */
     .hero-meta a {
       display: inline-block;
       border-radius: 999px;
@@ -256,14 +258,6 @@
     .hero-meta a:hover {
       border-color: var(--accent);
       color: var(--text-main);
-    }
-
-    .hero-meta span {
-      border-radius: 999px;
-      padding: 4px 10px;
-      background: var(--bg-card);
-      border: 1px solid rgba(148, 163, 184, 0.35);
-      margin-right: 6px;
     }
 
     /* GENERIC SECTIONS */
@@ -311,7 +305,6 @@
       line-height: 1.7;
     }
 
-    /* stop breaking words in half */
     .hero-sub,
     .section-intro,
     .panel-body {
@@ -390,7 +383,6 @@
       gap: 12px;
     }
 
-    /* helper for top-of-section images */
     .section-image-top {
       margin-bottom: 32px;
     }
@@ -469,7 +461,7 @@
         </div>
       </div>
       <nav class="nav-links">
-        <a href="#toothpaste">WhiteICE</a>
+        <a href="#toothpaste">Toothpaste</a>
         <a href="#daylight5k">Daylight 5K</a>
         <a href="#giftbox">Gift Box</a>
         <a href="#dentists">For Dentists</a>
@@ -479,16 +471,19 @@
     </header>
 
     <main>
+      <!-- HERO -->
       <section class="hero" id="top">
         <div>
-          <div class="hero-kicker">Premium Dental-Tech Whitening</div>
+          <div class="hero-kicker" id="hero-kicker">The Original Maintenance Stick</div>
+
           <h1 class="hero-title">
             A <span>whiter smile</span> in the time it takes to drink your coffee.
           </h1>
-          
+
           <img
-            src="IMG_1967.jpeg"
-            alt="WhiteICE the coolest way to white teeth"
+            id="hero-image"
+            src="070F4115-5AFF-4E62-BC0B-14C9C653A460.png"
+            alt="WhiteICE Original Maintenance Stick"
             class="product-image whiteice"
             style="margin-bottom: 24px;"
           >
@@ -500,7 +495,9 @@
           </p>
 
           <div class="hero-actions">
-            <a href="#toothpaste" class="btn-primary">Shop WhiteICE</a>
+            <button id="hero-toggle" class="btn-primary" aria-pressed="false">
+              Show Toothpaste
+            </button>
             <a href="#wholesale" class="btn-ghost">Wholesale &amp; Offices</a>
           </div>
 
@@ -511,6 +508,7 @@
         </div>
       </section>
 
+      <!-- WhiteICE Toothpaste -->
       <section id="toothpaste">
         <div class="section-label">WhiteICE Toothpaste</div>
         <h2 class="section-title">The world’s first carnauba wax toothpaste.</h2>
@@ -553,6 +551,7 @@
         </div>
       </section>
 
+      <!-- Gift Box -->
       <section id="giftbox">
         <div class="section-label">Gift Box</div>
         <h2 class="section-title">The Gift of a Smile.</h2>
@@ -590,6 +589,7 @@
         </div>
       </section>
 
+      <!-- Daylight 5K Light -->
       <section id="daylight5k">
         <div class="section-label">In-Office Technology</div>
         <h2 class="section-title">DayLight 5K² Whitening Light.</h2>
@@ -641,6 +641,7 @@
         </div>
       </section>
 
+      <!-- For Dentists -->
       <section id="dentists">
         <div class="section-label">For Dentists</div>
         <h2 class="section-title">WSWW INC. is the dentist’s best friend.</h2>
@@ -690,6 +691,7 @@
         </div>
       </section>
 
+      <!-- Wholesale & Training -->
       <section id="wholesale">
         <div class="section-label">Wholesale · Training · Marketing</div>
         <h2 class="section-title">Wholesale pricing &amp; whitening programs.</h2>
@@ -734,6 +736,7 @@
         </div>
       </section>
 
+      <!-- Contact -->
       <section id="contact">
         <div class="section-label">Contact</div>
         <div class="contact-card">
@@ -760,5 +763,57 @@
       © 2013 WhiteScience · WSWW INC. All rights reserved.
     </footer>
   </div>
+
+  <!-- HERO IMAGE TOGGLE SCRIPT -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const toggleBtn = document.getElementById("hero-toggle");
+      const heroImg = document.getElementById("hero-image");
+      const heroKicker = document.getElementById("hero-kicker");
+
+      // Your two hero images
+      const imgStick = "070F4115-5AFF-4E62-BC0B-14C9C653A460.png";
+      const imgPaste = "IMG_1946.jpeg";
+
+      // Matching text for each state
+      const altStick = "WhiteICE Original Maintenance Stick";
+      const altPaste = "WhiteICE Carnauba Wax Toothpaste";
+
+      const kickerStick = "The Original Maintenance Stick";
+      const kickerPaste = "New WhiteICE Toothpaste";
+
+      function showStick() {
+        heroImg.src = imgStick;
+        heroImg.alt = altStick;
+        if (heroKicker) heroKicker.textContent = kickerStick;
+
+        toggleBtn.textContent = "Show Toothpaste";
+        toggleBtn.setAttribute("aria-pressed", "false");
+      }
+
+      function showPaste() {
+        heroImg.src = imgPaste;
+        heroImg.alt = altPaste;
+        if (heroKicker) heroKicker.textContent = kickerPaste;
+
+        toggleBtn.textContent = "Show Maintenance Stick";
+        toggleBtn.setAttribute("aria-pressed", "true");
+      }
+
+      // Ensure your starting state is consistent
+      showStick();
+
+      toggleBtn.addEventListener("click", () => {
+        const currentSrc = heroImg.getAttribute("src");
+        const isStick = currentSrc === imgStick;
+
+        if (isStick) {
+          showPaste();
+        } else {
+          showStick();
+        }
+      });
+    });
+  </script>
 </body>
 </html>
