@@ -534,12 +534,9 @@
               <div class="chip">Instant Results</div>
             </div>
 
-            <!-- STRIPE PAYMENT LINK READY -->
             <a class="btn-buy stripe-buy"
                data-product="maintenance"
-               href="#"
-               target="_blank"
-               rel="noopener">
+               href="#">
               Buy Now <span class="price">$59.99</span>
             </a>
           </div>
@@ -581,12 +578,9 @@
               <div class="chip">Coffee · Tea · Wine</div>
             </div>
 
-            <!-- STRIPE PAYMENT LINK READY -->
             <a class="btn-buy stripe-buy"
                data-product="toothpaste"
-               href="#"
-               target="_blank"
-               rel="noopener">
+               href="#">
               Buy Now <span class="price">$60</span>
             </a>
           </div>
@@ -630,12 +624,9 @@
               <li>• Supports premium pricing in your office</li>
             </ul>
 
-            <!-- STRIPE PAYMENT LINK READY -->
             <a class="btn-buy stripe-buy"
                data-product="giftbox"
-               href="#"
-               target="_blank"
-               rel="noopener">
+               href="#">
               Buy Now <span class="price">$79.99</span>
             </a>
           </div>
@@ -686,12 +677,9 @@
               <div class="chip">Lifetime warranty</div>
             </div>
 
-            <!-- STRIPE PAYMENT LINK READY -->
             <a class="btn-buy stripe-buy"
                data-product="daylight5k"
-               href="#"
-               target="_blank"
-               rel="noopener">
+               href="#">
               Request Pricing <span class="price">$2,495</span>
             </a>
           </div>
@@ -736,13 +724,10 @@
               <li>• Co-branded marketing assets for your office</li>
             </ul>
 
-            <!-- STRIPE PAYMENT LINK READY -->
             <a class="btn-buy stripe-buy"
                data-product="dentist-starter"
-               href="#"
-               target="_blank"
-               rel="noopener">
-              Get Started <span class="price">from $499</span>
+               href="#">
+              Get Started <span class="price">$499</span>
             </a>
           </div>
 
@@ -785,13 +770,10 @@
                 <div class="chip">Co-branded assets</div>
               </div>
 
-              <!-- STRIPE PAYMENT LINK READY -->
               <a class="btn-buy stripe-buy"
                  data-product="wholesale-starter"
-                 href="#"
-                 target="_blank"
-                 rel="noopener">
-                Buy Starter Kit <span class="price">$999</span>
+                 href="#">
+                Buy Whitening on Wheels <span class="price">$2,999</span>
               </a>
             </div>
             <div>
@@ -878,17 +860,26 @@
     });
 
     // =========================================================
-    // STRIPE PAYMENT LINKS (SAFE FOR STATIC SITES)
-    // Paste your TEST payment links here.
-    // If a link isn't filled in yet, the button falls back to mailto.
+    // STRIPE PAYMENT LINKS (LIVE)
     // =========================================================
-    const STRIPE_TEST_LINKS = {
-      maintenance: "https://buy.stripe.com/test_REPLACE_MAINTENANCE_LINK",
-      toothpaste: "https://buy.stripe.com/test_REPLACE_TOOTHPASTE_LINK",
-      giftbox: "https://buy.stripe.com/test_REPLACE_GIFTBOX_LINK",
-      daylight5k: "https://buy.stripe.com/test_REPLACE_DAYLIGHT5K_LINK",
-      "dentist-starter": "https://buy.stripe.com/test_REPLACE_DENTIST_STARTER_LINK",
-      "wholesale-starter": "https://buy.stripe.com/test_REPLACE_WHOLESALE_STARTER_LINK"
+    const STRIPE_LINKS = {
+      // Whitening on Wheels - $2,999.00
+      "wholesale-starter": "https://buy.stripe.com/fZubJ1cb2fNU8RX1n34ko05",
+
+      // Dentist Starter - $499.00
+      "dentist-starter": "https://buy.stripe.com/28E8wP8YQatA1pvghX4ko06",
+
+      // DayLight 5K² - $2,495.00
+      "daylight5k": "https://buy.stripe.com/dRm3cv5MEfNU7NTd5L4ko07",
+
+      // WhiteScience Gift Box - $79.99
+      "giftbox": "https://buy.stripe.com/14A4gz5ME59gb05fdT4ko08",
+
+      // WhiteICE Toothpaste - $60.00
+      "toothpaste": "https://buy.stripe.com/28E5kD0sk9pwb051n34ko09",
+
+      // WhiteICE Maintenance Stick - $59.99
+      "maintenance": "https://buy.stripe.com/4gM3cvfne0T0d8d6Hn4ko0aa"
     };
 
     const MAILTO_FALLBACK = {
@@ -903,13 +894,12 @@
     document.addEventListener("DOMContentLoaded", () => {
       document.querySelectorAll(".stripe-buy").forEach((btn) => {
         const key = btn.getAttribute("data-product");
-        const stripeLink = STRIPE_TEST_LINKS[key];
+        const stripeLink = STRIPE_LINKS[key];
 
         const isValidStripe =
           stripeLink &&
           typeof stripeLink === "string" &&
-          stripeLink.startsWith("https://") &&
-          !stripeLink.includes("REPLACE_");
+          stripeLink.startsWith("https://buy.stripe.com/");
 
         if (isValidStripe) {
           btn.href = stripeLink;
