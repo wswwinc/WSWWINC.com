@@ -72,18 +72,17 @@
     .brand {
       display: flex;
       flex-direction: column;
-      gap: 6px;
+      gap: 2px;
     }
 
-    /* NEW: header logo image (uses IMG_2384.jpeg) */
-    .brand-logo {
-      height: 44px;
-      width: 240px;          /* controls visible crop width */
-      object-fit: cover;     /* crops like a banner */
-      object-position: left center; /* keeps the logo/left side visible */
-      border-radius: 10px;
-      display: block;
+    /* RESTORED: original text-based logo */
+    .logo-mark {
+      font-size: 30px;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
     }
+    .logo-mark span { color: var(--accent); }
 
     .logo-sub {
       font-size: 13px;
@@ -130,7 +129,7 @@
       padding: 40px 4px 56px;
     }
 
-    /* NEW: Hero uses IMG_2384.jpeg as banner background */
+    /* Hero uses IMG_2384.jpeg as banner background */
     .hero.hero--ws {
       background-image: url("IMG_2384.jpeg");
       background-size: cover;
@@ -159,7 +158,7 @@
       pointer-events: none;
     }
 
-    /* NEW: glass card on top of banner */
+    /* Glass card on top of banner */
     .hero-content {
       position: relative;
       max-width: 560px;
@@ -476,12 +475,6 @@
         text-align: center;
       }
 
-      .brand-logo {
-        width: 220px;
-        height: 40px;
-        object-position: left center;
-      }
-
       .nav-links {
         justify-content: center;
         flex-wrap: wrap;
@@ -499,12 +492,9 @@
   <div class="page">
     <header>
       <div class="brand">
-        <!-- CHANGED: text logo replaced by image logo -->
-        <img
-          src="IMG_2384.jpeg"
-          alt="WhiteScience Worldwide"
-          class="brand-logo"
-        >
+        <div class="logo-mark">
+          WHITE<span>SCIENCE</span>
+        </div>
         <div class="logo-sub">
           Professional Teeth Whitening · WSWWINC
         </div>
@@ -522,7 +512,6 @@
     </header>
 
     <main>
-      <!-- CHANGED: hero now uses IMG_2384.jpeg as background banner -->
       <section class="hero hero--ws" id="top">
         <div class="hero-content">
           <div class="hero-kicker" id="hero-kicker">The Original Maintenance Stick</div>
@@ -861,7 +850,7 @@
     // =========================================================
     const STRIPE_LINKS = {
       // Whitening on Wheels - $2,999.00
-      "wholesale-starter": "https://buy.stripe.com/https://buy.stripe.com/4gM8wPdf6gRYc49ghX4ko0g",
+      "wholesale-starter": "https://buy.stripe.com/4gM8wPdf6gRYc49ghX4ko0g",
 
       // Dentist Starter - $499.00
       "dentist-starter": "https://buy.stripe.com/bJe7sL8YQ3187NTc1H4ko0f",
