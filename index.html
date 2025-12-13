@@ -53,42 +53,33 @@
       padding: 24px 16px 72px;
     }
 
-    /* HEADER */
+    /* =========================================================
+       HEADER (TOP BANNER IMAGE + NAV)
+       ========================================================= */
 
-    header {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 16px;
-      padding: 10px 4px 18px;
+    header.site-header {
       position: sticky;
       top: 0;
       z-index: 20;
+
       background: rgba(255, 255, 255, 0.96);
       backdrop-filter: blur(16px);
       border-bottom: 1px solid rgba(226, 232, 240, 0.7);
-    }
 
-    .brand {
+      padding: 10px 4px 18px;
       display: flex;
       flex-direction: column;
-      gap: 2px;
+      align-items: center;
+      gap: 14px;
     }
 
-    /* RESTORED: original text-based logo */
-    .logo-mark {
-      font-size: 30px;
-      font-weight: 700;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-    }
-    .logo-mark span { color: var(--accent); }
-
-    .logo-sub {
-      font-size: 13px;
-      text-transform: uppercase;
-      letter-spacing: 0.18em;
-      color: var(--text-muted);
+    .header-banner {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 14px;
+      border: 1px solid rgba(226, 232, 240, 0.7);
+      box-shadow: 0 10px 30px rgba(15, 23, 42, 0.10);
     }
 
     .nav-links {
@@ -97,6 +88,8 @@
       font-size: 12px;
       text-transform: uppercase;
       letter-spacing: 0.16em;
+      flex-wrap: wrap;
+      justify-content: center;
     }
 
     .nav-links a {
@@ -119,47 +112,45 @@
 
     .nav-links a:hover::after { width: 100%; }
 
-    /* HERO */
+    /* =========================================================
+       HERO (IMG_2384.jpeg background + glass card)
+       ========================================================= */
 
     .hero {
       display: grid;
       grid-template-columns: 1fr;
       gap: 24px;
       align-items: center;
-      padding: 40px 4px 56px;
+      padding: 24px 4px 56px;
     }
 
-    /* Hero uses IMG_2384.jpeg as banner background */
-    
-  /* OLD LOOK: clean dark hero behind the glass card */
-  background:
-    radial-gradient(900px 420px at 15% 10%, rgba(67, 179, 255, 0.22), rgba(0,0,0,0) 60%),
-    radial-gradient(700px 360px at 85% 0%, rgba(110, 231, 255, 0.18), rgba(0,0,0,0) 55%),
-    linear-gradient(180deg, #070b14 0%, #0b1220 100%);
-  border-radius: 26px;
-  overflow: hidden;
-  padding: 28px 18px;
-  min-height: 520px;
-  position: relative;
-  border: 1px solid rgba(226, 232, 240, 0.25);
-  box-shadow: var(--shadow-soft);
-}
+    .hero.hero--ws {
+      background-image: url("IMG_2384.jpeg");
+      background-size: cover;
+      background-position: left center;
+      background-repeat: no-repeat;
+      border-radius: 26px;
+      overflow: hidden;
+      padding: 28px 18px;
+      min-height: 520px;
+      position: relative;
+      border: 1px solid rgba(226, 232, 240, 0.7);
+      box-shadow: var(--shadow-soft);
+    }
 
-    /* Soft fade so text/buttons always readable */
     .hero.hero--ws::before {
       content: "";
       position: absolute;
       inset: 0;
       background: linear-gradient(
         to bottom,
-        rgba(0,0,0,0.00) 0%,
-        rgba(0,0,0,0.10) 55%,
-        rgba(0,0,0,0.30) 100%
+        rgba(0,0,0,0.05) 0%,
+        rgba(0,0,0,0.18) 55%,
+        rgba(0,0,0,0.35) 100%
       );
       pointer-events: none;
     }
 
-    /* Glass card on top of banner */
     .hero-content {
       position: relative;
       max-width: 560px;
@@ -243,39 +234,6 @@
       background: var(--accent-soft);
     }
 
-    /* BLUE GLOW BUY BUTTONS */
-
-    .btn-buy {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      padding: 9px 18px;
-      margin-top: 16px;
-      border-radius: 999px;
-      background: radial-gradient(circle at top, #7dd3fc, #0ea5e9);
-      box-shadow: 0 0 18px rgba(59, 130, 246, 0.75);
-      border: none;
-      font-size: 12px;
-      font-weight: 500;
-      text-transform: uppercase;
-      letter-spacing: 0.16em;
-      color: #020617;
-      cursor: pointer;
-      transition: transform 0.15s ease, box-shadow 0.15s ease, filter 0.15s ease;
-    }
-
-    .btn-buy span.price {
-      margin-left: 8px;
-      font-weight: 600;
-      font-size: 13px;
-    }
-
-    .btn-buy:hover {
-      transform: translateY(-1px);
-      box-shadow: 0 0 26px rgba(37, 99, 235, 0.95);
-      filter: brightness(1.06);
-    }
-
     .hero-meta {
       font-size: 11px;
       text-transform: uppercase;
@@ -301,7 +259,9 @@
       color: var(--text-main);
     }
 
-    /* GENERIC SECTIONS */
+    /* =========================================================
+       SECTIONS
+       ========================================================= */
 
     section { margin-bottom: 56px; }
 
@@ -428,6 +388,39 @@
       margin-bottom: 32px;
     }
 
+    /* BLUE GLOW BUY BUTTONS */
+
+    .btn-buy {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 9px 18px;
+      margin-top: 16px;
+      border-radius: 999px;
+      background: radial-gradient(circle at top, #7dd3fc, #0ea5e9);
+      box-shadow: 0 0 18px rgba(59, 130, 246, 0.75);
+      border: none;
+      font-size: 12px;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: #020617;
+      cursor: pointer;
+      transition: transform 0.15s ease, box-shadow 0.15s ease, filter 0.15s ease;
+    }
+
+    .btn-buy span.price {
+      margin-left: 8px;
+      font-weight: 600;
+      font-size: 13px;
+    }
+
+    .btn-buy:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 0 26px rgba(37, 99, 235, 0.95);
+      filter: brightness(1.06);
+    }
+
     /* CONTACT */
 
     .contact-card {
@@ -470,37 +463,24 @@
     /* RESPONSIVE */
 
     @media (max-width: 880px) {
-      header {
-        flex-wrap: wrap;
-        justify-content: center;
-        text-align: center;
-      }
-
-      .nav-links {
-        justify-content: center;
-        flex-wrap: wrap;
-      }
-
       .panel-split { grid-template-columns: 1fr; }
-
       .page { padding-inline: 14px; }
-
       .panel { padding-inline: 10px; }
     }
   </style>
 </head>
 <body>
   <div class="page">
-    <header>
-      <div class="brand">
-        <div class="logo-mark">
-          WHITE<span>SCIENCE</span>
-        </div>
-        <div class="logo-sub">
-          Professional Teeth Whitening · WSWWINC
-        </div>
-      </div>
 
+    <!-- TOP HEADER BANNER (replaces the blue text logo) -->
+    <header class="site-header">
+      <img
+        class="header-banner"
+        src="IMG_2384.jpeg"
+        alt="WhiteScience header banner"
+      >
+
+      <!-- NAV (unchanged links) -->
       <nav class="nav-links">
         <a href="#maintenance">Maintenance Stick</a>
         <a href="#toothpaste">WhiteICE Toothpaste</a>
@@ -565,9 +545,7 @@
               <div class="chip">Instant Results</div>
             </div>
 
-            <a class="btn-buy stripe-buy"
-               data-product="maintenance"
-               href="#">
+            <a class="btn-buy stripe-buy" data-product="maintenance" href="#">
               Buy Now <span class="price">$59.99</span>
             </a>
           </div>
@@ -609,9 +587,7 @@
               <div class="chip">Coffee · Tea · Wine</div>
             </div>
 
-            <a class="btn-buy stripe-buy"
-               data-product="toothpaste"
-               href="#">
+            <a class="btn-buy stripe-buy" data-product="toothpaste" href="#">
               Buy Now <span class="price">$60</span>
             </a>
           </div>
@@ -655,9 +631,7 @@
               <li>• Supports premium pricing in your office</li>
             </ul>
 
-            <a class="btn-buy stripe-buy"
-               data-product="giftbox"
-               href="#">
+            <a class="btn-buy stripe-buy" data-product="giftbox" href="#">
               Buy Now <span class="price">$79.99</span>
             </a>
           </div>
@@ -708,9 +682,7 @@
               <div class="chip">Lifetime warranty</div>
             </div>
 
-            <a class="btn-buy stripe-buy"
-               data-product="daylight5k"
-               href="#">
+            <a class="btn-buy stripe-buy" data-product="daylight5k" href="#">
               Request Pricing <span class="price">$2,495</span>
             </a>
           </div>
@@ -755,9 +727,7 @@
               <li>• Co-branded marketing assets for your office</li>
             </ul>
 
-            <a class="btn-buy stripe-buy"
-               data-product="dentist-starter"
-               href="#">
+            <a class="btn-buy stripe-buy" data-product="dentist-starter" href="#">
               Get Started <span class="price">$499</span>
             </a>
           </div>
@@ -801,9 +771,7 @@
                 <div class="chip">Co-branded assets</div>
               </div>
 
-              <a class="btn-buy stripe-buy"
-                 data-product="wholesale-starter"
-                 href="#">
+              <a class="btn-buy stripe-buy" data-product="wholesale-starter" href="#">
                 Buy Whitening on Wheels <span class="price">$2,999</span>
               </a>
             </div>
@@ -850,22 +818,11 @@
     // STRIPE PAYMENT LINKS (LIVE)
     // =========================================================
     const STRIPE_LINKS = {
-      // Whitening on Wheels - $2,999.00
       "wholesale-starter": "https://buy.stripe.com/4gM8wPdf6gRYc49ghX4ko0g",
-
-      // Dentist Starter - $499.00
       "dentist-starter": "https://buy.stripe.com/bJe7sL8YQ3187NTc1H4ko0f",
-
-      // DayLight 5K² - $2,495.00
       "daylight5k": "https://buy.stripe.com/fZu3cv8YQbxEfgle9P4ko0e",
-
-      // WhiteScience Gift Box - $79.99
       "giftbox": "https://buy.stripe.com/00w8wPcb259g3xD1n34ko0d",
-
-      // WhiteICE Toothpaste - $60.00
       "toothpaste": "https://buy.stripe.com/aFa00jdf6dFMfgl2r74ko0c",
-
-      // WhiteICE Maintenance Stick - $59.99
       "maintenance": "https://buy.stripe.com/9B600j4IA6dkc49d5L4ko0b"
     };
 
