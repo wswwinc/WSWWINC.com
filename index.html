@@ -131,18 +131,19 @@
 
     /* Hero uses IMG_2384.jpeg as banner background */
     .hero.hero--ws {
-      background-image: url("IMG_2407.png");
-      background-size: cover;
-      background-position: 85% center;
-      background-repeat: no-repeat;
-      border-radius: 26px;
-      overflow: hidden;
-      padding: 28px 18px;
-      min-height: 520px;
-      position: relative;
-      border: 1px solid rgba(226, 232, 240, 0.7);
-      box-shadow: var(--shadow-soft);
-    }
+  /* OLD LOOK: clean dark hero behind the glass card */
+  background:
+    radial-gradient(900px 420px at 15% 10%, rgba(67, 179, 255, 0.22), rgba(0,0,0,0) 60%),
+    radial-gradient(700px 360px at 85% 0%, rgba(110, 231, 255, 0.18), rgba(0,0,0,0) 55%),
+    linear-gradient(180deg, #070b14 0%, #0b1220 100%);
+  border-radius: 26px;
+  overflow: hidden;
+  padding: 28px 18px;
+  min-height: 520px;
+  position: relative;
+  border: 1px solid rgba(226, 232, 240, 0.25);
+  box-shadow: var(--shadow-soft);
+}
 
     /* Soft fade so text/buttons always readable */
     .hero.hero--ws::before {
