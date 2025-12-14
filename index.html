@@ -481,23 +481,21 @@
 
     /* RESPONSIVE */
 
-    @media (max-width: 880px) {
-      .panel-split { grid-template-columns: 1fr; }
-      .page { padding-inline: 14px; }
-      .panel { padding-inline: 10px; }
-    }
-  </style>
-</head>
-<body>
-  <div class="page">
+@media (max-width: 880px) {
+  .panel-split { grid-template-columns: 1fr; }
+  .page { padding-inline: 14px; }
+  .panel { padding-inline: 10px; }
+}
 
-    <!-- TOP HEADER BANNER (replaces the blue text logo) -->
-    <header class="site-header">
-      <img
-        class="header-banner"
-        src="IMG_2384.jpeg"
-        alt="WhiteScience header banner"
-      >
+/* MOBILE: header banner shows the full image (no cropping) */
+@media (max-width: 520px){
+  .header-banner{
+    object-fit: contain;
+    object-position: center;
+    background: #0b1220;
+    height: 210px; /* optional: gives it a little more room */
+  }
+}
 
       <!-- NAV (unchanged links) -->
       <nav class="nav-links">
