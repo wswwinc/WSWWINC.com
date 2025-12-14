@@ -74,32 +74,32 @@
     }
 
     .header-banner{
-  width: 100%;
-  height: 190px;                 /* try 170–220px */
-  object-fit: cover;
-  object-position: left center;
-  border-radius: 18px;
+      width: 100%;
+      height: 190px;
+      object-fit: cover;
+      object-position: left center;
+      border-radius: 18px;
 
-  border: 1px solid rgba(125,211,252,0.75);
+      border: 1px solid rgba(125,211,252,0.75);
 
-  box-shadow:
-    0 20px 60px rgba(2,6,23,0.42),
-    0 0 0 1px rgba(255,255,255,0.22) inset,
-    0 0 26px rgba(125,211,252,0.55),
-    0 0 60px rgba(56,189,248,0.35);
+      box-shadow:
+        0 20px 60px rgba(2,6,23,0.42),
+        0 0 0 1px rgba(255,255,255,0.22) inset,
+        0 0 26px rgba(125,211,252,0.55),
+        0 0 60px rgba(56,189,248,0.35);
 
-  filter: contrast(1.18) saturate(1.08) brightness(1.03);
-  transition: transform .18s ease, box-shadow .18s ease, filter .18s ease;
-}
+      filter: contrast(1.18) saturate(1.08) brightness(1.03);
+      transition: transform .18s ease, box-shadow .18s ease, filter .18s ease;
+    }
 
-.header-banner:hover{
-  transform: scale(1.012);
-  box-shadow:
-    0 24px 80px rgba(2,6,23,0.55),
-    0 0 34px rgba(125,211,252,0.70),
-    0 0 85px rgba(56,189,248,0.45);
-  filter: contrast(1.22) saturate(1.12) brightness(1.05);
-}
+    .header-banner:hover{
+      transform: scale(1.012);
+      box-shadow:
+        0 24px 80px rgba(2,6,23,0.55),
+        0 0 34px rgba(125,211,252,0.70),
+        0 0 85px rgba(56,189,248,0.45);
+      filter: contrast(1.22) saturate(1.12) brightness(1.05);
+    }
 
     .nav-links {
       display: flex;
@@ -481,23 +481,67 @@
 
     /* RESPONSIVE */
 
-@media (max-width: 880px) {
-  .panel-split { grid-template-columns: 1fr; }
-  .page { padding-inline: 14px; }
-  .panel { padding-inline: 10px; }
-}
+    @media (max-width: 880px) {
+      .panel-split { grid-template-columns: 1fr; }
+      .page { padding-inline: 14px; }
+      .panel { padding-inline: 10px; }
+    }
 
-/* MOBILE: header banner shows the full image (no cropping) */
-@media (max-width: 520px){
-  .header-banner{
-    object-fit: contain;
-    object-position: center;
-    background: #0b1220;
-    height: 210px; /* optional: gives it a little more room */
-  }
-}
+    /* MOBILE: iPhone optimizations */
+    @media (max-width: 520px){
+      /* Banner shows full image (no cropping) */
+      .header-banner{
+        object-fit: contain;
+        object-position: center;
+        background: #0b1220;
+        height: 210px;
+      }
+      
+      /* Nav becomes 2-column tap buttons */
+      .nav-links {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+        width: 100%;
+        max-width: 420px;
+      }
+      
+      .nav-links a {
+        background: #ffffff;
+        border: 1px solid rgba(148, 163, 184, 0.5);
+        border-radius: 12px;
+        padding: 12px 8px;
+        text-align: center;
+        font-size: 10px;
+        white-space: normal;
+      }
+      
+      .nav-links a::after {
+        display: none;
+      }
+      
+      /* Hero adjustments */
+      .hero.hero--ws {
+        min-height: 420px;
+        padding: 20px 12px;
+      }
+      
+      .hero-actions {
+        flex-direction: column;
+        width: 100%;
+      }
+      
+      .btn-primary {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header class="site-header">
+      <img src="IMG_2393.jpeg" alt="WhiteScience banner" class="header-banner">
 
-      <!-- NAV (unchanged links) -->
       <nav class="nav-links">
         <a href="#maintenance">Maintenance Stick</a>
         <a href="#toothpaste">WhiteICE Toothpaste</a>
@@ -567,13 +611,14 @@
             </a>
           </div>
           <div>
-  <img src="IMG_2439.jpeg" alt="WhiteICE Original Maintenance Stick" class="product-image whiteice">
-</div>
+            <img src="IMG_2439.jpeg" alt="WhiteICE Original Maintenance Stick" class="product-image whiteice">
+          </div>
+        </div>
       </section>
 
       <section id="toothpaste">
         <div class="section-label">WhiteICE Toothpaste</div>
-        <h2 class="section-title">The world’s first carnauba wax toothpaste.</h2>
+        <h2 class="section-title">The world's first carnauba wax toothpaste.</h2>
         <p class="section-intro">
           WhiteScience brings you WhiteICE — a carnauba-based whitening
           toothpaste that helps keep stains from sticking while it brightens
@@ -618,7 +663,7 @@
         <h2 class="section-title">The Gift of a Smile.</h2>
         <p class="section-intro">
           Our WhiteScience gift box packaging turns professional whitening into
-          a luxury experience that’s easy to present in your practice or retail
+          a luxury experience that's easy to present in your practice or retail
           space.
         </p>
 
@@ -703,7 +748,7 @@
 
       <section id="dentists">
         <div class="section-label">For Dentists</div>
-        <h2 class="section-title">WSWW INC. is the dentist’s best friend.</h2>
+        <h2 class="section-title">WSWW INC. is the dentist's best friend.</h2>
 
         <div class="section-image-top">
           <img
@@ -768,7 +813,7 @@
             <div class="panel-body">
               <p>
                 To learn more about wholesale pricing, in-office training or
-                co-branded marketing materials, contact WSWW INC. and we’ll
+                co-branded marketing materials, contact WSWW INC. and we'll
                 help you design a whitening program around your patients and
                 practice goals.
               </p>
@@ -806,7 +851,7 @@
             WhiteScience and WSWW INC. are owned and operated by
             <strong>Dillon Frost</strong>. For wholesale pricing,
             in-office systems or product questions, reach out directly and
-            we’ll help you choose the right WhiteScience solution.
+            we'll help you choose the right WhiteScience solution.
           </p>
           <div class="contact-row">
             <div><span>Phone:</span> (254) 217-4923</div>
@@ -826,48 +871,48 @@
   </div>
 
   <script>
-    // =========================================================
-    // STRIPE PAYMENT LINKS (LIVE)
-    // =========================================================
-    const STRIPE_LINKS = {
-      "wholesale-starter": "https://buy.stripe.com/4gM8wPdf6gRYc49ghX4ko0g",
-      "dentist-starter": "https://buy.stripe.com/bJe7sL8YQ3187NTc1H4ko0f",
-      "daylight5k": "https://buy.stripe.com/fZu3cv8YQbxEfgle9P4ko0e",
-      "giftbox": "https://buy.stripe.com/00w8wPcb259g3xD1n34ko0d",
-      "toothpaste": "https://buy.stripe.com/aFa00jdf6dFMfgl2r74ko0c",
-      "maintenance": "https://buy.stripe.com/9B600j4IA6dkc49d5L4ko0b"
-    };
+  // =========================================================
+  // STRIPE PAYMENT LINKS (LIVE)
+  // =========================================================
+  const STRIPE_LINKS = {
+    "wholesale-starter": "https://buy.stripe.com/4gM8wPdf6gRYc49ghX4ko0g",
+    "dentist-starter": "https://buy.stripe.com/bJe7sL8YQ3187NTc1H4ko0f",
+    "daylight5k": "https://buy.stripe.com/fZu3cv8YQbxEfgle9P4ko0e",
+    "giftbox": "https://buy.stripe.com/00w8wPcb259g3xD1n34ko0d",
+    "toothpaste": "https://buy.stripe.com/aFa00jdf6dFMfgl2r74ko0c",
+    "maintenance": "https://buy.stripe.com/9B600j4IA6dkc49d5L4ko0b"
+  };
 
-    const MAILTO_FALLBACK = {
-      maintenance: "mailto:WSWWINC@yahoo.com?subject=Order%20-%20WhiteICE%20Maintenance%20Stick",
-      toothpaste: "mailto:WSWWINC@yahoo.com?subject=Order%20-%20WhiteICE%20Toothpaste",
-      giftbox: "mailto:WSWWINC@yahoo.com?subject=Order%20-%20WhiteScience%20Gift%20Box",
-      daylight5k: "mailto:WSWWINC@yahoo.com?subject=Order%20-%20DayLight%205K2%20System",
-      "dentist-starter": "mailto:WSWWINC@yahoo.com?subject=Dentist%20Program%20Inquiry",
-      "wholesale-starter": "mailto:WSWWINC@yahoo.com?subject=Wholesale%20WhiteScience%20Program"
-    };
+  const MAILTO_FALLBACK = {
+    maintenance: "mailto:WSWWINC@yahoo.com?subject=Order%20-%20WhiteICE%20Maintenance%20Stick",
+    toothpaste: "mailto:WSWWINC@yahoo.com?subject=Order%20-%20WhiteICE%20Toothpaste",
+    giftbox: "mailto:WSWWINC@yahoo.com?subject=Order%20-%20WhiteScience%20Gift%20Box",
+    daylight5k: "mailto:WSWWINC@yahoo.com?subject=Order%20-%20DayLight%205K2%20System",
+    "dentist-starter": "mailto:WSWWINC@yahoo.com?subject=Dentist%20Program%20Inquiry",
+    "wholesale-starter": "mailto:WSWWINC@yahoo.com?subject=Wholesale%20WhiteScience%20Program"
+  };
 
-    document.addEventListener("DOMContentLoaded", () => {
-      document.querySelectorAll(".stripe-buy").forEach((btn) => {
-        const key = btn.getAttribute("data-product");
-        const stripeLink = STRIPE_LINKS[key];
+  document.addEventListener("DOMContentLoaded", () => {
+    document.querySelectorAll(".stripe-buy").forEach((btn) => {
+      const key = btn.getAttribute("data-product");
+      const stripeLink = STRIPE_LINKS[key];
 
-        const isValidStripe =
-          stripeLink &&
-          typeof stripeLink === "string" &&
-          stripeLink.startsWith("https://buy.stripe.com/");
+      const isValidStripe =
+        stripeLink &&
+        typeof stripeLink === "string" &&
+        stripeLink.startsWith("https://buy.stripe.com/");
 
-        if (isValidStripe) {
-          btn.href = stripeLink;
-          btn.target = "_blank";
-          btn.rel = "noopener";
-        } else {
-          btn.href = MAILTO_FALLBACK[key] || "mailto:WSWWINC@yahoo.com";
-          btn.removeAttribute("target");
-          btn.removeAttribute("rel");
-        }
-      });
+      if (isValidStripe) {
+        btn.href = stripeLink;
+        btn.target = "_blank";
+        btn.rel = "noopener";
+      } else {
+        btn.href = MAILTO_FALLBACK[key] || "mailto:WSWWINC@yahoo.com";
+        btn.removeAttribute("target");
+        btn.removeAttribute("rel");
+      }
     });
-  </script>
+  });
+</script>
 </body>
 </html>
