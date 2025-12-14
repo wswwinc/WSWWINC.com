@@ -489,13 +489,16 @@
 
     /* MOBILE: iPhone optimizations */
     @media (max-width: 520px){
-      /* Banner shows full image (no cropping) */
-      .header-banner{
-        object-fit: contain;
-        object-position: center;
-        background: #0b1220;
-        height: 210px;
-      }
+  .header-banner{
+    width: 100%;
+    height: auto;            /* key */
+    max-height: 220px;       /* optional cap */
+    object-fit: contain;     /* still no cropping */
+    object-position: center; /* keeps it centered */
+    background: transparent; /* removes black bars */
+    display: block;
+  }
+}
       
       /* Nav becomes 2-column tap buttons */
       .nav-links {
