@@ -490,12 +490,27 @@
 
     /* MOBILE: iPhone optimizations */
     @media (max-width: 520px){
-      /* 1. GLOBAL SCROLL SAFETY 
-         Applied to html/body so we don't clip glows in .page
-      */
-      html, body {
-        overflow-x: hidden;
-      }
+  /* 1. GLOBAL SCROLL SAFETY */
+  html, body {
+    overflow-x: hidden;
+  }
+
+  /* EXTRA RIGHT PADDING (keeps text away from the edge) */
+  .panel,
+  .hero-content,
+  .contact-card {
+    padding-right: 22px;
+  }/* Keep text INSIDE the cards on mobile */
+.panel-split > * { min-width: 0; }
+
+.panel-body,
+.section-intro,
+.hero-sub {
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+  
 
       .header-banner{
         width: 100%;
