@@ -51,6 +51,7 @@
       max-width: 1120px;
       margin: 0 auto;
       padding: 24px 16px 72px;
+      /* Removed overflow-x: hidden here so we don't clip shadows */
     }
 
     /* =========================================================
@@ -489,16 +490,22 @@
 
     /* MOBILE: iPhone optimizations */
     @media (max-width: 520px){
-  .header-banner{
-    width: 100%;
-    height: auto;            /* key */
-    max-height: 220px;       /* optional cap */
-    object-fit: contain;     /* still no cropping */
-    object-position: center; /* keeps it centered */
-    background: transparent; /* removes black bars */
-    display: block;
-  }
-}
+      /* 1. GLOBAL SCROLL SAFETY 
+         Applied to html/body so we don't clip glows in .page
+      */
+      html, body {
+        overflow-x: hidden;
+      }
+
+      .header-banner{
+        width: 100%;
+        height: auto;
+        max-height: 220px;
+        object-fit: contain;
+        object-position: center;
+        background: transparent;
+        display: block;
+      }
       
       /* Nav becomes 2-column tap buttons */
       .nav-links {
@@ -536,6 +543,28 @@
       
       .btn-primary {
         width: 100%;
+      }
+
+      /* 2. SAFE PILL BUTTON FIX 
+         - No forced width
+         - Max width caps it
+         - Wrap enabled for long text 
+      */
+      .btn-buy {
+        width: auto;           /* Let it hug content */
+        max-width: 100%;       /* Prevent spill */
+        white-space: normal;   /* Allow text to wrap */
+        flex-wrap: wrap;       /* Allow flex items to break lines */
+        height: auto;          /* Grow vertically if needed */
+        text-align: center;    /* Center text if it wraps */
+        line-height: 1.4;      /* Better reading for multi-line */
+        padding: 12px 20px;    /* A bit more touch area */
+      }
+
+      /* 3. PRICE SPACING FIX */
+      .btn-buy span.price {
+        /* Soften the margin so it doesn't force overflow */
+        margin-left: 6px; 
       }
     }
   </style>
